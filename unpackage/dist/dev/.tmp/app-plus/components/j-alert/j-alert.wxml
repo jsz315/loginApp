@@ -1,0 +1,1 @@
+<view class="data-v-8be0ee46"><j-pop vue-id="1" hasBtns="{{hasBtns}}" class="data-v-8be0ee46" bind:__l="__l" vue-slots="{{['tip','btns']}}"><view slot="tip">{{''+tip+''}}</view><view slot="btns"><view data-event-opts="{{[['tap',[['onClose',['$event']]]]]}}" class="btn data-v-8be0ee46" bindtap="__e">{{label}}</view></view></j-pop></view>

@@ -1,0 +1,34 @@
+.box.data-v-f79a9f2e {
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.72);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  z-index: 10;
+}
+.box .pop-box.data-v-f79a9f2e {
+  width: 646rpx;
+  height: 764rpx;
+  position: relative;
+  background: url(../../static/img/pop-bg.06923f42.png) no-repeat center;
+  background-size: contain;
+}
+.box .pop-box .pop-btn.data-v-f79a9f2e {
+  position: absolute;
+  left: 58rpx;
+  bottom: 60rpx;
+  background: rgba(0, 0, 0, 0);
+  width: 532rpx;
+  height: 94rpx;
+}
+

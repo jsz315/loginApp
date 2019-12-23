@@ -1,0 +1,46 @@
+.box.data-v-792c2407 {
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.72);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.box .content.data-v-792c2407 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+  margin: auto;
+  background: #FFFFFF;
+  width: 600rpx;
+  display: inline-block;
+  border-radius: 20rpx;
+}
+.box .content .tip.data-v-792c2407 {
+  text-align: center;
+  width: 540rpx;
+  margin: auto;
+  padding: 60rpx 0;
+}
+.box .content .btns.data-v-792c2407 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  text-align: center;
+  border-top: solid 1rpx #F6F6F6;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+

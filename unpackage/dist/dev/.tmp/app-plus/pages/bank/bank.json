@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "绑定银行卡",
+  "usingComponents": {
+    "j-alert": "/components/j-alert/j-alert",
+    "open-vip": "/components/open-vip/open-vip"
+  }
+}

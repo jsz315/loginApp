@@ -1,0 +1,146 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页,
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "愿望钱包"
+			}
+		}, {
+			"path": "pages/company/company",
+			"style": {
+				"navigationBarTitleText": "资料信息"
+			}
+		}, {
+			"path": "pages/vip/vip",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/help/help",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "主页",
+				"navigationStyle": "custom"
+			}
+		}
+	    ,{
+            "path" : "pages/info/info",
+            "style" : {
+				"navigationBarTitleText": "我的资料"
+			}
+        }
+        ,{
+            "path" : "pages/proof/proof",
+            "style" : {
+				"navigationBarTitleText": "身份信息"
+			}
+        }
+        ,{
+            "path" : "pages/bank/bank",
+            "style" : {
+				"navigationBarTitleText": "绑定银行卡"
+			}
+        }
+        ,{
+            "path" : "pages/borrow/borrow",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/loan/loan",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/money/money",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/law/law",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/find/find",
+            "style" : {
+				"navigationBarTitleText": "找回密码"
+			}
+        }
+        ,{
+            "path" : "pages/reset/reset",
+            "style" : {
+				"navigationBarTitleText": "设置密码"
+			}
+        }
+        ,{
+            "path" : "pages/buy/buy",
+            "style" : {
+				"navigationBarTitleText": "开通会员"
+			}
+        }
+        ,{
+            "path" : "pages/custom/custom",
+            "style" : {
+				"navigationBarTitleText": "我的客服"
+			}
+        }
+        ,{
+            "path" : "pages/push/push",
+            "style" : {
+				"navigationBarTitleText": "提款推送"
+			}
+        }
+        ,{
+            "path" : "pages/answers/answers",
+            "style" : {
+				"navigationBarTitleText": "问题解答"
+			}
+        }
+        ,{
+            "path" : "pages/register/register",
+            "style" : {
+				"navigationBarTitleText": "注册账户"
+			}
+        }
+    ],
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#7F5FF6",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/home/home",
+			"text": "首页",
+			"iconPath": "static/img/tab10.png",
+			"selectedIconPath": "static/img/tab11.png"
+		}, {
+			"pagePath": "pages/vip/vip",
+			"text": "VIP办理",
+			"iconPath": "static/img/tab20.png",
+			"selectedIconPath": "static/img/tab21.png"
+		}, {
+			"pagePath": "pages/help/help",
+			"text": "助手",
+			"iconPath": "static/img/tab30.png",
+			"selectedIconPath": "static/img/tab31.png"
+		}, {
+			"pagePath": "pages/mine/mine",
+			"text": "我",
+			"iconPath": "static/img/tab40.png",
+			"selectedIconPath": "static/img/tab41.png"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarBackgroundColor": "#682FE9",
+		"backgroundColor": "#7F5FF6"
+	}
+}

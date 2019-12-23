@@ -1,0 +1,16 @@
+.company.data-v-c111ab06 {
+  width: 750rpx;
+  text-align: center;
+}
+.company .tip.data-v-c111ab06 {
+  margin: 30rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+.company .jrow-input.data-v-c111ab06 {
+  text-align: right;
+}
+.company .jbtn.data-v-c111ab06 {
+  margin-top: 30rpx;
+}
+

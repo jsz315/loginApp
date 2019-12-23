@@ -1,0 +1,22 @@
+.box.data-v-e0e67cbe {
+  width: 750rpx;
+}
+.box .jbtn.data-v-e0e67cbe {
+  margin-top: 500rpx;
+}
+.box .get-code.data-v-e0e67cbe {
+  width: 225rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #FFFFFF;
+  background: #682FE9;
+  border-radius: 30rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20rpx;
+  margin: auto;
+  font-size: 28rpx;
+}
+

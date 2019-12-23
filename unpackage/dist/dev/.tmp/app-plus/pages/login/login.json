@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "愿望钱包",
+  "usingComponents": {
+    "m-input": "/components/m-input"
+  }
+}

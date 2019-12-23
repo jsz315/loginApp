@@ -1,0 +1,63 @@
+.box{
+	width: 750upx;
+	.img{
+		width: 100%;
+		height: 360upx;
+		margin-bottom: 30upx;
+	}
+	.jbtn{
+		margin-top: 100upx;
+	}
+	.check-box{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #8F8F8F;
+		font-size: 24upx;
+		margin-top: 50upx;
+		.ico{
+			width: 24upx;
+			height: 24upx;
+		}
+		.hit-ico{
+			padding: 20upx;
+		}
+		.hit-txt{
+			padding: 20upx 0;
+		}
+	}
+	.get-code{
+		width: 225upx;
+		height: 60upx;
+		line-height: 60upx;
+		text-align: center;
+		color: #FFFFFF;
+		background: #682FE9;
+		border-radius: 30upx;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 20upx;
+		margin: auto;
+		font-size: 28upx;
+	}
+}
+.pay-tip{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.pay-ico{
+		width: 64upx;
+		height: 64upx;
+		margin-bottom: 40upx;
+		animation: rotate 0.84s infinite;
+		animation-timing-function: linear;
+		
+	}
+}
+@-webkit-keyframes rotate
+{
+	0%   {transform: rotate(0);}
+	100% {transform: rotate(360deg);}
+}

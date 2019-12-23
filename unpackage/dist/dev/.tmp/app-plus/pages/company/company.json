@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "资料信息",
+  "usingComponents": {
+    "simple-address": "/components/simple-address/simple-address"
+  }
+}

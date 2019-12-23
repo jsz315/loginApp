@@ -1,0 +1,17 @@
+.box.data-v-99b99b26 {
+  width: 750rpx;
+}
+.box .item.data-v-99b99b26 {
+  padding: 20rpx 30rpx;
+  border-bottom: solid 1rpx #f0f0f0;
+}
+.box .item .quest.data-v-99b99b26 {
+  color: #666;
+  padding: 10rpx 0;
+}
+.box .item .answer.data-v-99b99b26 {
+  color: #999;
+  border-top: solid 1rpx #f0f0f0;
+  padding: 20rpx 0;
+}
+

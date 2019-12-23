@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "注册账户",
+  "usingComponents": {
+    "m-input": "/components/m-input"
+  }
+}

@@ -1,0 +1,11 @@
+.box.data-v-41faa521 {
+  width: 750rpx;
+}
+.box .jbtn.data-v-41faa521 {
+  margin-top: 500rpx;
+}
+.box .tip.data-v-41faa521 {
+  margin: 30rpx;
+  color: #000000;
+}
+

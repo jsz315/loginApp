@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "slider-bar": "/components/slider-bar/slider-bar",
+    "scroll-tip": "/components/scroll-tip/scroll-tip",
+    "vip-goods": "/components/vip-goods/vip-goods",
+    "agreement": "/components/agreement/agreement"
+  }
+}

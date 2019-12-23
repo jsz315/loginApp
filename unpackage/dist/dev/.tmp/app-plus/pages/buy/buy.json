@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "开通会员",
+  "usingComponents": {
+    "m-input": "/components/m-input",
+    "j-pop": "/components/j-pop/j-pop",
+    "j-confirm": "/components/j-confirm/j-confirm",
+    "agreement": "/components/agreement/agreement"
+  }
+}

@@ -1,0 +1,28 @@
+.box.data-v-e4a95856 {
+  width: 750rpx;
+}
+.box .user-box.data-v-e4a95856 {
+  text-align: center;
+  margin: 40rpx auto;
+}
+.box .user-box .user-img.data-v-e4a95856 {
+  width: 324rpx;
+  height: 324rpx;
+}
+.box .tip.data-v-e4a95856 {
+  color: #1A1A1A;
+  text-align: center;
+  margin: 30rpx;
+}
+.box .jrow-box.data-v-e4a95856 {
+  margin-top: 40rpx;
+  margin-bottom: 160rpx;
+}
+.box .find-box.data-v-e4a95856 {
+  width: 640rpx;
+  font-size: 28rpx;
+  text-align: right;
+  color: #999999;
+  margin: 20rpx auto;
+}
+
