@@ -74,7 +74,7 @@
 					url = '/pages/bank/bank'
 				}
 				else if(n == 4){
-					url = '/pages/reset/reset'
+					url = '/pages/find/find'
 				}
 				else if(n == 5){
 					this.isLoginChange(false);
@@ -85,6 +85,12 @@
 				    url: url
 				});
 			}
+		},
+		onTabItemTap(t){
+			console.log(t);
+		},
+		onShow(){
+			// uni.showTabBar();
 		}
 	}
 </script>

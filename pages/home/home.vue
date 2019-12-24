@@ -18,33 +18,74 @@
 		<vip-goods></vip-goods>
 		
 		<agreement v-if="popAgree" @close="closeAgree" :cur="curWord" :title="curTitle"></agreement>
+		<open-vip v-if="popBuy" @close="closeBuy"></open-vip>
 	</view>
 </template>
 
 <script>
-
+	import {
+		mapState,
+	    mapMutations
+	} from 'vuex'
+	
 	import sliderBar from "@/components/slider-bar/slider-bar.vue"
 	import scrollTip from '@/components/scroll-tip/scroll-tip.vue'
 	import vipGoods from '@/components/vip-goods/vip-goods.vue'
 	import agreement from '@/components/agreement/agreement.vue';
+	import openVip from '@/components/open-vip/open-vip.vue';
 	
 	export default {
 		data() {
 			return {
 				popAgree: false,
-				src: '../../static/img/chose1.png',
-				check: false,
+				src: '../../static/img/chose2.png',
+				check: true,
 				curWord: 1,
-				curTitle: ""
+				curTitle: "",
+				popBuy: false
 			}
 		},
 		components: {
-		    sliderBar, scrollTip, vipGoods, agreement
+		    sliderBar, scrollTip, vipGoods, agreement, openVip
+		},
+		computed:{
+			...mapState(["isLogin", "isVip", "inPro"])
 		},
 		methods: {
 			jump(){
+				if(!this.check){
+					uni.showToast({
+					    icon: 'none',
+					    title: '请先同意相关条款'
+					});
+					return;
+				}
+				let url = "";
+				if(this.isLogin){
+					if(!this.inPro){
+						url = '/pages/info/info'
+					}
+					else{
+						if(this.isVip){
+							url = '/pages/push/push'
+						}
+						else{
+							this.popBuy = true;
+							return;
+						}
+					}
+				}
+				else{
+					url = '/pages/login/login'
+				}
 				uni.navigateTo({
-				    url: '/pages/company/company'
+				    url: url
+				});
+			},
+			closeBuy(){
+				this.popBuy = false;
+				uni.navigateTo({
+				    url: '/pages/buy/buy'
 				});
 			},
 			onCheck(){
@@ -65,6 +106,9 @@
 			closeAgree(){
 				this.popAgree = false;
 			}
+		},
+		onTabItemTap(t){
+			console.log(t);
 		}
 	}
 </script>

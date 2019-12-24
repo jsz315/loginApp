@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['onClick',['$event']]]]]}}" class="{{['code-box data-v-776eb67f',(second>0)?'none':'']}}" bindtap="__e"><block wx:if="{{second>0}}"><text class="data-v-776eb67f">{{"("+second+")"}}</text></block>获取验证码</view>

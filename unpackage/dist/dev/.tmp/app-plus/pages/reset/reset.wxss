@@ -1,11 +1,12 @@
-.box.data-v-41faa521 {
+.box.data-v-b1360e26 {
   width: 750rpx;
 }
-.box .jbtn.data-v-41faa521 {
+.box .jbtn.data-v-b1360e26 {
   margin-top: 500rpx;
 }
-.box .tip.data-v-41faa521 {
+.box .tip.data-v-b1360e26 {
   margin: 30rpx;
-  color: #000000;
+  color: #999;
+  font-size: 28rpx;
 }
 

@@ -1,7 +1,7 @@
-.box .title-tip.data-v-0ce9eaf7 {
+.box .title-tip.data-v-28db22ab {
   padding: 20rpx 30rpx;
 }
-.box .row-img.data-v-0ce9eaf7 {
+.box .row-img.data-v-28db22ab {
   margin: 1rpx auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -11,11 +11,11 @@
           justify-content: center;
   text-align: center;
 }
-.box .row1-img.data-v-0ce9eaf7 {
+.box .row1-img.data-v-28db22ab {
   width: 360rpx;
   height: 280rpx;
 }
-.box .row2-img.data-v-0ce9eaf7 {
+.box .row2-img.data-v-28db22ab {
   width: 690rpx;
   height: 280rpx;
 }

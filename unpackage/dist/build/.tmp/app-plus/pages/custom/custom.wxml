@@ -1,0 +1,1 @@
+<view class="box data-v-b3559dac"><image class="img data-v-b3559dac" src="../../static/img/custom2.png" mode="aspectFill"></image><view class="jrow-box data-v-b3559dac"><view class="jrow-tip data-v-b3559dac">客服电话(9:30-18:30)</view><view data-event-opts="{{[['tap',[['callPhone',['$event']]]]]}}" class="jrow-input data-v-b3559dac" bindtap="__e">400-991-6799</view></view></view>

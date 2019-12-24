@@ -1,0 +1,62 @@
+.vip.data-v-1d81a50e {
+  width: 750rpx;
+}
+.vip .title-img.data-v-1d81a50e {
+  width: 100%;
+  height: 300rpx;
+}
+.vip .title-tip.data-v-1d81a50e {
+  padding: 30rpx;
+  background: #FFFFFF;
+  border-radius: 30rpx 30rpx 0 0;
+  margin-top: -30rpx;
+  position: relative;
+  z-index: 1;
+}
+.vip .list.data-v-1d81a50e {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  background: #FFFFFF;
+  padding-left: 30rpx;
+  margin-bottom: 30rpx;
+}
+.vip .list .item.data-v-1d81a50e {
+  width: 160rpx;
+  margin-right: 20rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+.vip .list .item .img-box.data-v-1d81a50e {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx auto;
+  background: #fff7e8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-radius: 50%;
+}
+.vip .list .item .img-box .item-img.data-v-1d81a50e {
+  width: 72rpx;
+  height: 72rpx;
+}
+.vip .list .item .tip1.data-v-1d81a50e {
+  color: #333;
+}
+.vip .list .item .tip2.data-v-1d81a50e {
+  color: #999;
+}
+.vip .jbtn.data-v-1d81a50e {
+  margin: 30rpx auto;
+}
+

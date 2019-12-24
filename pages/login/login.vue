@@ -46,10 +46,10 @@
             }
         },
 		computed:{
-			...mapState({hasReg: "hasReg"})
+			...mapState({hasReg: "hasReg", localAccount: "account"})
 		},
         methods: {
-            ...mapMutations(['accountChange', 'isLoginChange']),
+            ...mapMutations(['accountChange', 'isLoginChange', 'tokenChange', 'userIdChange', 'hasRegChange']),
             initPosition() {
                 /**
                  * 使用 absolute 定位，并且设置 bottom 值进行定位。软键盘弹出时，底部会因为窗口变化而被顶上来。
@@ -62,28 +62,44 @@
 				    url: '/pages/find/find'
 				});
 			},
-            onNext() {
+            async onNext() {
                 /**
                  * 客户端对账号信息进行一些必要的校验。
                  * 实际开发中，根据业务需要进行处理，这里仅做示例。
                  */
-                if (this.account.length < 5) {
+                if (this.account.length < 11) {
                     uni.showToast({
                         icon: 'none',
-                        title: '账号最短为 5 个字符'
+                        title: '请输入正确的手机号'
                     });
                     return;
 				}
-                
-				this.accountChange(this.account);
-				uni.navigateTo({
-				    url: '/pages/register/register'
-				});
+                this.accountChange(this.account);
+				let res = await api.isPhoneExists(this.account);
+				if(res.code == 200){
+					if(res.data.isExists == 10){
+						uni.navigateTo({
+							url: '/pages/register/register'
+						});
+					}
+					else if(res.data.isExists == 20){
+						this.hasRegChange(true);
+					}
+				}
+				else{
+					uni.showToast({
+					    icon: 'none',
+					    title: res.msg
+					});
+					return;
+				}
             },
 			async onLogin(){
 				let res = await api.login(this.password);
 				if(res.code == 200){
 					this.isLoginChange(true);
+					this.tokenChange(res.data.token);
+					this.userIdChange(res.data.userId);
 					uni.switchTab({
 					    url: '/pages/home/home'
 					});
@@ -102,7 +118,7 @@
 			
         },
 		onShow(){
-			
+			this.account = this.localAccount;
 		}
     }
 </script>

@@ -1,12 +1,15 @@
 <template>
     <view class="box">
 		<view class="jrow-box">
-			<input class="jrow-input" v-model="account"  placeholder="6-16位字符，包含字母和数字" type="text"/>
+			<input class="jrow-input" v-model="account"  placeholder="请输入你的手机号" type="text"/>
 		</view>
 		
 		<view class="jrow-box">
 			<input class="jrow-input" v-model="code"  placeholder="请输入短信验证码 " type="text"/>
-			<view class="get-code" @tap="getCode">获取验证码</view>
+			
+			<view class="get-code">
+				<timer-btn @done="getCode"></timer-btn>
+			</view>
 		</view>
 		
         <view class="jbtn" @tap="onNext">下一步</view>
@@ -20,10 +23,11 @@
 	} from 'vuex'
     import api from '../../js/api.js';
     import mInput from '../../components/m-input.vue';
-
+	import timerBtn from '../../components/timer-btn/timer-btn.vue';
+	
     export default {
         components: {
-            mInput
+            mInput, timerBtn
         },
         data() {
             return {
@@ -32,23 +36,20 @@
 				account: ''
             }
         },
-		computed: mapState([]),
+		computed: mapState({hasReg: "hasReg", localAccount: "account"}),
         methods: {
+			...mapMutations(['accountChange', 'isLoginChange', 'tokenChange', 'userIdChange']),
             async onNext() {
-                /**
-                 * 客户端对账号信息进行一些必要的校验。
-                 * 实际开发中，根据业务需要进行处理，这里仅做示例。
-                 */
-                if (this.code.length < 5) {
+                if (this.code.length < 4) {
                     uni.showToast({
                         icon: 'none',
-                        title: '账号最短为 5 个字符'
+                        title: '请输入正确的验证码'
                     });
                     return;
                 }
 				
 				let res = await api.verifySms(this.code)
-				if(res.code == 200){
+				if(res.code == 200 && res.data.state == 10){
 					uni.navigateTo({
 					    url: '/pages/reset/reset?code=' + this.code
 					});
@@ -61,11 +62,39 @@
 				}
             },
 			async getCode(){
-				let res = await api.sendSms();
+				if (this.account.length < 11) {
+				    uni.showToast({
+				        icon: 'none',
+				        title: '请输入正确的手机号'
+				    });
+				    return;
+				}
+				this.accountChange(this.account);
+				let res = await api.sendSms(true);
+				if(res.code == 200){
+					if(res.data.state == 10){
+						uni.showToast({
+							icon: 'none',
+						    title: res.msg
+						});
+					}
+					else{
+						uni.showToast({
+							icon: 'none',
+						    title: res.data.message
+						});
+					}
+				}
+				else{
+					uni.showToast({
+						icon: 'none',
+					    title: res.msg
+					});
+				}
 			}
         },
 		onShow(){
-			
+			this.account = this.localAccount
 		}
     }
 </script>

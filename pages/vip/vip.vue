@@ -20,7 +20,7 @@
 <script>
 	import vipGoods from '@/components/vip-goods/vip-goods.vue'
 	
-	let listData = [{"src":"baoxian.png","t1":"意外保险","t2":"最高50万元"},{"src":"tijian.png","t1":"双人体验套餐","t2":"限时免费"},{"src":"kefu.png","t1":"专属客服","t2":"一对一"},{"src":"aqy.png","t1":"爱奇艺VIP","t2":"畅享9个月"},{"src":"bank_account.png","t1":"办卡返现","t2":"最高180元"},{"src":"fanxian.png","t1":"推荐办卡返现","t2":"最高180元"},{"src":"hk.png","t1":"推广黑卡返现","t2":"最高300元"},{"src":"jiudian.png","t1":"酒店补贴","t2":"最高90元"},{"src":"feiji.png","t1":"机票补贴","t2":"最高30元"},{"src":"huoche.png","t1":"火车票补贴","t2":"最高30元"},{"src":"hongbao.png","t1":"返现红包","t2":"最高15元"}];
+	let listData = [{"src":"1-1.png","t1":"开卡礼包","t2":"爱奇艺月卡限时送"},{"src":"1-7.png","t1":"话费流量","t2":"9折起减5元"},{"src":"1-3.png","t1":"淘宝优惠","t2":"免费领优惠券"},{"src":"1-4.png","t1":"5折追剧","t2":"海量视频会员"},{"src":"1-6.png","t1":"半价咖啡","t2":"星巴克/CoCo"},{"src":"1-3.png","t1":"8折餐饮","t2":"肯德基/必胜客"},{"src":"1-2.png","t1":"8折商超","t2":"屈臣氏/百果园"},{"src":"1-8.png","t1":"会员网赚","t2":"赚钱特权"}];
 	export default {
 		data() {
 			return {
@@ -37,6 +37,9 @@
 					url: "/pages/buy/buy"
 				})
 			}
+		},
+		onShow(){
+			// uni.hideTabBar();
 		}
 	}
 </script>

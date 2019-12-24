@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "设置密码",
+  "usingComponents": {
+    "m-input": "/components/m-input",
+    "j-alert": "/components/j-alert/j-alert"
+  }
+}

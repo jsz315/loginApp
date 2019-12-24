@@ -1,1 +1,1 @@
-<view class="box data-v-792c2407"><view class="content data-v-792c2407"><view class="tip data-v-792c2407"><slot name="tip"></slot></view><block wx:if="{{hasBtns}}"><view class="btns data-v-792c2407"><slot name="btns"></slot></view></block></view></view>
+<view class="box data-v-374b608a"><view class="content data-v-374b608a"><view class="tip data-v-374b608a"><slot name="tip"></slot></view><block wx:if="{{hasBtns}}"><view class="btns data-v-374b608a"><slot name="btns"></slot></view></block></view></view>

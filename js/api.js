@@ -2,15 +2,24 @@ import http from './http.js';
 import store from "../store/index.js";
 const md5 = require('./js-md5');
 
-let str = md5('BCFFE4852D42A12318C907B20A491EA618657160693register');
-console.log("md5");
-console.log(str);
+// let str = md5('BCFFE4852D42A12318C907B20A491EA618657160693register');
+// console.log("md5");
+// console.log(str);
 
-async function sendSms() {
+async function isPhoneExists(phone){
 	let param = {
 		mobileType: 2,
-		phone: "18667175699",
-		type: "register"
+		phone: phone
+	}
+	let res = await http.get("/api/user/isPhoneExists.htm", param);
+	return res.data;
+}
+
+async function sendSms(isFind) {
+	let param = {
+		mobileType: 2,
+		phone: store.state.account,
+		type: isFind ? "findReg" : "register"
 	}
 	let res = await http.get("/api/user/sendSms.htm", param);
 	return res.data;
@@ -19,12 +28,12 @@ async function sendSms() {
 async function register(code, password) {
 	let param = {
 		agree: 1,
-		client: "android",
-		mobileType: 2,
+		client: store.state.info.platform,
 		loginName: store.state.account,
-		loginPwd: password,
-		type: "register",
-		registerAddr: "",
+		loginPwd: md5(password),
+		mobileType: 2,
+		// registerAddr: "",
+		// registerCoordinate: "",
 		vcode: code
 	}
 	let res = await http.get("/api/user/register.htm", param);
@@ -33,12 +42,9 @@ async function register(code, password) {
 
 async function login(password) {
 	let param = {
-		agree: 1,
-		client: "android",
 		mobileType: 2,
 		loginName: store.state.account,
-		loginPwd: password,
-		registerAddr: ""
+		loginPwd: md5(password),
 	}
 	
 	let res = await http.get("/api/user/login.htm", param);
@@ -48,12 +54,11 @@ async function login(password) {
 
 async function verifySms(code) {
 	let param = {
-		agree: 1,
-		client: "android",
+		// client: store.state.info.platform,
 		mobileType: 2,
 		phone: store.state.account,
 		type: "findReg",
-		registerAddr: "",
+		// registerAddr: "",
 		vcode: code
 	}
 	let res = await http.get("/api/user/verifySms.htm", param);
@@ -62,19 +67,20 @@ async function verifySms(code) {
 
 async function forgetPwd(code, password) {
 	let param = {
-		client: "android",
+		// client: store.state.info.platform,
 		mobileType: 2,
 		phone: store.state.account,
-		newPwd: password,
-		type: "findReg",
-		registerAddr: "",
+		newPwd: md5(password),
+		// type: "findReg",
+		// registerAddr: "",
 		vcode: code
 	}
-	let res = await http.get("/api/user/forgetPwd.htm", param);
+	let res = await http.get("/api/user/login/forgetPwd", param);
 	return res.data;
 }
 
 export default {
+	isPhoneExists,
 	sendSms,
 	register,
 	login,

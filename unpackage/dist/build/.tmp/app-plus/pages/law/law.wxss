@@ -1,0 +1,20 @@
+.box.data-v-53ba30bd {
+  width: 750rpx;
+}
+.box .word.data-v-53ba30bd {
+  padding: 40rpx;
+}
+.box .word .title.data-v-53ba30bd {
+  width: 300rpx;
+  margin: 20rpx auto 60rpx;
+  text-align: center;
+  font-size: 60rpx;
+  color: #000;
+  padding-bottom: 20rpx;
+  border-bottom: solid 8rpx #007AFF;
+}
+.box .word .jp.data-v-53ba30bd {
+  color: #999;
+  margin-bottom: 20rpx;
+}
+

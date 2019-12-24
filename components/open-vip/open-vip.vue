@@ -1,7 +1,8 @@
 <template>
 	<view class="box">
 		<view class="pop-box">
-			<view class="pop-btn" @tap="onClose"></view>
+			<view class="pop-txt">恭喜您!</view>
+			<view class="pop-btn" @tap="onClose">去开通</view>
 		</view>
 	</view>
 </template>

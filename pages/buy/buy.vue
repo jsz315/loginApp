@@ -9,7 +9,9 @@
 		<view class="jrow-box">
 			<view class="jrow-tip">付款验证码</view>
 			<input class="jrow-input" v-model="code"  placeholder="请输入短信验证码" type="text"/>
-			<view class="get-code">获取验证码</view>
+			<view class="get-code">
+				<timer-btn @done="getCode"></timer-btn>
+			</view>
 		</view>
 		
         <view class="jbtn" @tap="onNext">立即开通</view>
@@ -46,10 +48,11 @@
 	import jPop from '@/components/j-pop/j-pop.vue';
 	import jConfirm from '@/components/j-confirm/j-confirm.vue';
 	import agreement from '@/components/agreement/agreement.vue';
+	import timerBtn from '../../components/timer-btn/timer-btn.vue';
 	
     export default {
         components: {
-            mInput, jPop, jConfirm, agreement
+            mInput, jPop, jConfirm, agreement, timerBtn
         },
         data() {
             return {
@@ -72,6 +75,9 @@
 			onCheck(){
 				this.check = !this.check;
 				this.src = this.check ? '../../static/img/chose2.png' : '../../static/img/chose1.png';
+			},
+			getCode(){
+				
 			},
             onNext() {
                 /**

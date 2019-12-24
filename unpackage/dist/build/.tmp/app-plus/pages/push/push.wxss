@@ -1,0 +1,59 @@
+.box.data-v-061f678e {
+  width: 750rpx;
+  text-align: center;
+}
+.box .tip.data-v-061f678e {
+  margin: 30rpx;
+  color: #999999;
+  font-size: 24rpx;
+  text-align: left;
+}
+.box .title-img.data-v-061f678e {
+  width: 100%;
+  height: 123rpx;
+}
+.box .list .item.data-v-061f678e {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-bottom: solid 1rpx #f0f0f0;
+  background: #FFFFFF;
+  padding: 30rpx 0;
+}
+.box .list .item .jico.data-v-061f678e {
+  width: 64rpx;
+  height: 64rpx;
+  margin-left: 30rpx;
+}
+.box .list .item .info.data-v-061f678e {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  text-align: left;
+  margin-left: 30rpx;
+}
+.box .list .item .info .tip1.data-v-061f678e {
+  color: #333;
+}
+.box .list .item .info .tip2.data-v-061f678e {
+  color: #999;
+  font-size: 24rpx;
+}
+.box .list .item .tip3.data-v-061f678e {
+  margin-right: 20rpx;
+  color: #FFFFFF;
+  width: 150rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: #682FE9;
+  border-radius: 30rpx;
+}
+.box .jbtn.data-v-061f678e {
+  margin-top: 100rpx;
+}
+

@@ -1,15 +1,15 @@
-.box.data-v-99b99b26 {
+.box.data-v-1f327f8e {
   width: 750rpx;
 }
-.box .item.data-v-99b99b26 {
+.box .item.data-v-1f327f8e {
   padding: 20rpx 30rpx;
   border-bottom: solid 1rpx #f0f0f0;
 }
-.box .item .quest.data-v-99b99b26 {
+.box .item .quest.data-v-1f327f8e {
   color: #666;
   padding: 10rpx 0;
 }
-.box .item .answer.data-v-99b99b26 {
+.box .item .answer.data-v-1f327f8e {
   color: #999;
   border-top: solid 1rpx #f0f0f0;
   padding: 20rpx 0;

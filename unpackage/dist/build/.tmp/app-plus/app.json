@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login/login",
+    "pages/company/company",
+    "pages/vip/vip",
+    "pages/help/help",
+    "pages/mine/mine",
+    "pages/info/info",
+    "pages/proof/proof",
+    "pages/bank/bank",
+    "pages/borrow/borrow",
+    "pages/loan/loan",
+    "pages/money/money",
+    "pages/law/law",
+    "pages/find/find",
+    "pages/reset/reset",
+    "pages/buy/buy",
+    "pages/custom/custom",
+    "pages/push/push",
+    "pages/answers/answers",
+    "pages/register/register"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#682FE9",
+    "backgroundColor": "#7F5FF6"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#7F5FF6",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/img/tab10.png",
+        "selectedIconPath": "static/img/tab11.png"
+      },
+      {
+        "pagePath": "pages/vip/vip",
+        "text": "VIP办理",
+        "iconPath": "static/img/tab20.png",
+        "selectedIconPath": "static/img/tab21.png"
+      },
+      {
+        "pagePath": "pages/help/help",
+        "text": "助手",
+        "iconPath": "static/img/tab30.png",
+        "selectedIconPath": "static/img/tab31.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我",
+        "iconPath": "static/img/tab40.png",
+        "selectedIconPath": "static/img/tab41.png"
+      }
+    ]
+  },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "愿望钱包",
+  "compilerVersion": "2.4.6",
+  "usingComponents": {}
+}

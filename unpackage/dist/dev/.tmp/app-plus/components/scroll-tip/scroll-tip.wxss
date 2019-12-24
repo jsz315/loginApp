@@ -1,11 +1,11 @@
-.swiper.data-v-65519389 {
+.swiper.data-v-49d3ae3d {
   height: 48rpx;
 }
-.swiper-item.data-v-65519389 {
+.swiper-item.data-v-49d3ae3d {
   line-height: 48rpx;
   height: 48rpx;
 }
-.swiper-item .word.data-v-65519389 {
+.swiper-item .word.data-v-49d3ae3d {
   margin: 0 auto;
   width: 690rpx;
   text-align: center;

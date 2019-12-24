@@ -30,6 +30,9 @@ const setUser = function (userInfo) {
 	if(userInfo.inPro){
 		user.inPro = userInfo.inPro;
 	}
+	if(userInfo.userId){
+		user.userId = userInfo.userId;
+	}
 	
     uni.setStorageSync(USERS_KEY, JSON.stringify(user));
 }

@@ -1,11 +1,11 @@
 <template>
     <view class="box">
 		<view class="jrow-box">
-			<input class="jrow-input" v-model="password1"  placeholder="请输入新密码" type="text"/>
+			<input class="jrow-input" v-model="password1"  placeholder="请输入新密码" type="password"/>
 		</view>
 		
 		<view class="jrow-box">
-			<input class="jrow-input" v-model="password2"  placeholder="请确认新密码" type="text"/>
+			<input class="jrow-input" v-model="password2"  placeholder="请确认新密码" type="password"/>
 		</view>
 		
 		<view class="tip">密码为6-16位字符，包含字母和数字</view>
@@ -49,7 +49,7 @@
                  * 客户端对账号信息进行一些必要的校验。
                  * 实际开发中，根据业务需要进行处理，这里仅做示例。
                  */
-                if (this.password1 < 6) {
+                if (this.password1.length < 6) {
                     uni.showToast({
                         icon: 'none',
                         title: '密码最短为 6 个字符'

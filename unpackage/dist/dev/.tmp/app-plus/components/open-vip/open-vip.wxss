@@ -1,4 +1,4 @@
-.box.data-v-f79a9f2e {
+.box.data-v-32b6451d {
   width: 750rpx;
   height: 100%;
   background: rgba(0, 0, 0, 0.72);
@@ -16,19 +16,30 @@
           align-items: center;
   z-index: 10;
 }
-.box .pop-box.data-v-f79a9f2e {
+.box .pop-box.data-v-32b6451d {
   width: 646rpx;
   height: 764rpx;
   position: relative;
   background: url(../../static/img/pop-bg.06923f42.png) no-repeat center;
   background-size: contain;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 34rpx;
 }
-.box .pop-box .pop-btn.data-v-f79a9f2e {
+.box .pop-box .pop-txt.data-v-32b6451d {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 34rpx;
+}
+.box .pop-box .pop-btn.data-v-32b6451d {
   position: absolute;
   left: 58rpx;
   bottom: 60rpx;
-  background: rgba(0, 0, 0, 0);
+  background: #45302B;
   width: 532rpx;
   height: 94rpx;
+  line-height: 94rpx;
+  border-radius: 47rpx;
 }
 

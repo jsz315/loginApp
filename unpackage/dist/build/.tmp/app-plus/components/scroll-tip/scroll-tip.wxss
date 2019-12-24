@@ -1,0 +1,17 @@
+.swiper.data-v-9f34451c {
+  height: 48rpx;
+}
+.swiper-item.data-v-9f34451c {
+  line-height: 48rpx;
+  height: 48rpx;
+}
+.swiper-item .word.data-v-9f34451c {
+  margin: 0 auto;
+  width: 690rpx;
+  text-align: center;
+  font-size: 24rpx;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+

@@ -1,14 +1,14 @@
-.box.data-v-3b85543e {
+.box.data-v-d33c32a6 {
   width: 750rpx;
   text-align: center;
   background: #FFFFFF;
 }
-.box .img.data-v-3b85543e {
+.box .img.data-v-d33c32a6 {
   width: 300rpx;
   height: 300rpx;
   margin: 70rpx auto;
 }
-.box .jrow-box.data-v-3b85543e {
+.box .jrow-box.data-v-d33c32a6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -16,7 +16,7 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.box .jrow-input.data-v-3b85543e {
+.box .jrow-input.data-v-d33c32a6 {
   text-align: right;
   color: #682FE9;
   font-size: 28rpx;

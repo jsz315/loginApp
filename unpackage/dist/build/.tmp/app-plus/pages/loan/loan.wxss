@@ -1,0 +1,9 @@
+.box.data-v-3dd669d8 {
+  width: 750rpx;
+  text-align: center;
+}
+.box .none.data-v-3dd669d8 {
+  width: 500rpx;
+  height: 300rpx;
+}
+

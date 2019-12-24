@@ -6,6 +6,7 @@ Vue.use(Vuex)
 
 let user = service.getUser();
 let info = uni.getSystemInfoSync();
+let timerId = 0;
 
 const store = new Vuex.Store({
     state: {
@@ -17,7 +18,9 @@ const store = new Vuex.Store({
 		inPro: !!user.inPro,
 		info: info,
 		appKey: "BCFFE4852D42A12318C907B20A491EA6",
+		userId: user.userId,
 		token: "",
+		second: 0
     },
     mutations: {
 		hasRegChange(state, hasReg){
@@ -49,6 +52,18 @@ const store = new Vuex.Store({
 		},
 		tokenChange(state, token){
 			state.token = token;
+		},
+		userIdChange(state, userId){
+			state.userId = userId;
+			updateLocalData(state);
+		},
+		secondChange(state, second){
+			state.second = second;
+			timerId = setInterval(()=>{
+				if(--state.second <= 0){
+					clearTimeout(timerId)
+				}
+			}, 1000)
 		}
     }
 })

@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"box.",[1],"data-v-3311fed9 { width: ",[0,750],"; }\n.",[1],"box .",[1],"jbtn.",[1],"data-v-3311fed9 { margin-top: ",[0,500],"; }\n.",[1],"box .",[1],"tip.",[1],"data-v-3311fed9 { margin: ",[0,30],"; color: #999; font-size: ",[0,28],"; }\n",],undefined,{path:"./pages/reset/reset.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/reset/reset.wxml') } }));

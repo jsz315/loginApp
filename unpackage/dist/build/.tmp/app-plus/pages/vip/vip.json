@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "vip-goods": "/components/vip-goods/vip-goods"
+  }
+}

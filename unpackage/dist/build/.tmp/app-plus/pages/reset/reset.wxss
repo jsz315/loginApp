@@ -1,0 +1,12 @@
+.box.data-v-3311fed9 {
+  width: 750rpx;
+}
+.box .jbtn.data-v-3311fed9 {
+  margin-top: 500rpx;
+}
+.box .tip.data-v-3311fed9 {
+  margin: 30rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+

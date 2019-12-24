@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "j-pop": "/components/j-pop/j-pop"
+  },
+  "component": true
+}

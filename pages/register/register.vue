@@ -2,7 +2,9 @@
     <view class="box">
 		<view class="jrow-box">
 			<input class="jrow-input" v-model="code"  placeholder="请输入短信验证码" type="text"/>
-			<view class="get-code" @tap="getCode">获取验证码</view>
+			<view class="get-code">
+				<timer-btn @done="getCode"></timer-btn>
+			</view>
 		</view>
 		
 		<view class="jrow-box">
@@ -21,10 +23,11 @@
 	} from 'vuex'
     import api from '../../js/api.js';
     import mInput from '../../components/m-input.vue';
-
+	import timerBtn from '../../components/timer-btn/timer-btn.vue';
+	
     export default {
         components: {
-            mInput
+            mInput, timerBtn
         },
         data() {
             return {
@@ -34,16 +37,12 @@
         },
 		computed: mapState(['account']),
         methods: {
-			...mapMutations(['hasRegChange']),
+			...mapMutations(['hasRegChange', 'tokenChange', 'userIdChange']),
             async onRegister() {
-                /**
-                 * 客户端对账号信息进行一些必要的校验。
-                 * 实际开发中，根据业务需要进行处理，这里仅做示例。
-                 */
-                if (this.code.length < 5) {
+                if (this.code.length < 4) {
                     uni.showToast({
                         icon: 'none',
-                        title: '账号最短为 5 个字符'
+                        title: '请输入正确的验证码'
                     });
                     return;
                 }
@@ -56,19 +55,51 @@
                 }
 				
 				let res = await api.register(this.code, this.password);
-                uni.showToast({
-                    title: '注册成功'
-                });
-				
-				this.hasRegChange(true);
-				
-				uni.reLaunch({
-				    url: '/pages/login/login'
-				});
+				if(res.code == 200){
+					uni.showToast({
+						icon: 'none',
+					    title: '注册成功'
+					});
+					
+					this.hasRegChange(true);
+					this.tokenChange(res.data.token);
+					this.userIdChange(res.data.userId);
+					
+					uni.reLaunch({
+					    url: '/pages/login/login'
+					});
+				}
+				else{
+					uni.showToast({
+						icon: 'none',
+					    title: res.msg
+					});
+					
+				}
+                
             },
 			async getCode(){
 				let res = await api.sendSms();
-				console.log(res);
+				if(res.code == 200){
+					if(res.data.state == 10){
+						uni.showToast({
+							icon: 'none',
+						    title: res.msg
+						});
+					}
+					else{
+						uni.showToast({
+							icon: 'none',
+						    title: res.data.message
+						});
+					}
+				}
+				else{
+					uni.showToast({
+						icon: 'none',
+					    title: res.msg
+					});
+				}
 			}
         },
 		onShow(){

@@ -1,0 +1,1 @@
+<view class="box data-v-53b4cc03"><view class="content data-v-53b4cc03"><view class="tip data-v-53b4cc03"><slot name="tip"></slot></view><block wx:if="{{hasBtns}}"><view class="btns data-v-53b4cc03"><slot name="btns"></slot></view></block></view></view>
