@@ -79,11 +79,83 @@ async function forgetPwd(code, password) {
 	return res.data;
 }
 
+async function getUserAuth() {
+	let param = {
+		mobileType: 2,
+		token: store.state.token,
+		userId: store.state.userId
+	}
+	let res = await http.get("/api/act/mine/userAuth/getUserAuth.htm", param);
+	return res.data;
+}
+
+async function list() {
+	let param = {
+		mobileType: 2,
+		type: 'BANK_TYPE',
+		token: store.state.token,
+		userId: store.state.userId
+	}
+	let res = await http.get("/api/act/dict/list.htm", param);
+	return res.data;
+}
+
+async function bindCardSendMsg() {
+	let param = {
+		mobileType: 2,
+		cardHolderId: 1,
+		cardHolderName: 1,
+		customerId: 1,
+		externalRefNumber: 1,
+		phoneNO: store.state.account,
+		token: store.state.token,
+		userId: store.state.userId
+	}
+	let res = await http.get("/api/pay/CJ/bindCardSendMsg.htm", param);
+	return res.data;
+}
+
+
+async function saveOrUpdate() {
+	let param = {
+		code: 0,
+		codeName: 0,
+		detailAddr: 0,
+		education: 0,
+		email: 0,
+		id: 0,
+		liveAddr: 0,
+		liveCoordinate: 0,
+		mac: 0,
+		marryState: 0,
+		name: 0,
+		operatingSystem: 0,
+		phone: 0,
+		phoneBrand: 0,
+		phoneMark: 0,
+		phoneType: 0,
+		relation: 0,
+		systemVersions: 0,
+		type: 0,
+		versionCode: 0,
+		versionName: 0,
+		mobileType: 2,
+		token: store.state.token,
+		userId: store.state.userId
+	}
+	let res = await http.get("/api/act/mine/contact/saveOrUpdate.htm ", param);
+	return res.data;
+}
+
 export default {
 	isPhoneExists,
 	sendSms,
 	register,
 	login,
 	verifySms,
-	forgetPwd
+	forgetPwd,
+	getUserAuth,
+	list,
+	bindCardSendMsg,
+	saveOrUpdate
 }

@@ -4,12 +4,16 @@ import App from './App'
 import store from './store'
 
 import api from './js/api.js'
+import init from './js/init.js'
 
 Vue.config.productionTip = false
 
 Vue.prototype.$store = store
 
 App.mpType = 'app'
+
+init.initBank();
+init.initAuth();
 
 const app = new Vue({
     store,

@@ -12,7 +12,7 @@
 					<view class="tip1">实名认证</view>
 					<view class="tip2">*请进行身份实名认证</view>
 				</view>
-				<text class="tip3">不完整</text>
+				<text class="tip3">{{getStateTip(userAuth.realNameState)}}</text>
 				<view class="jarrow"></view>
 			</view>
 			<view class="item">
@@ -21,7 +21,7 @@
 					<view class="tip1">身份信息</view>
 					<view class="tip2">*让我们了解您的基本情况</view>
 				</view>
-				<text class="tip3">不完整</text>
+				<text class="tip3">{{getStateTip(userAuth.idState)}}</text>
 				<view class="jarrow"></view>
 			</view>
 			<view class="item" @click="jump(2)">
@@ -30,7 +30,7 @@
 					<view class="tip1">资料信息</view>
 					<view class="tip2">*让我们了解您的资料信息</view>
 				</view>
-				<text class="tip3">不完整</text>
+				<text class="tip3">{{getStateTip(userAuth.workInfoState)}}</text>
 				<view class="jarrow"></view>
 			</view>
 			<view class="item" @click="jump(3)">
@@ -39,7 +39,7 @@
 					<view class="tip1">收款银行卡</view>
 					<view class="tip2">*我们会将钱打到该卡内</view>
 				</view>
-				<text class="tip3">不完整</text>
+				<text class="tip3">{{getStateTip(userAuth.bankCardState)}}</text>
 				<view class="jarrow"></view>
 			</view>
 			
@@ -49,7 +49,7 @@
 					<view class="tip1">手机号认证</view>
 					<view class="tip2">*认证您本人的手机号</view>
 				</view>
-				<text class="tip3">不完整</text>
+				<text class="tip3">{{getStateTip(userAuth.phoneState)}}</text>
 				<view class="jarrow"></view>
 			</view>
 			
@@ -73,13 +73,29 @@
 </template>
 
 <script>
+	import {
+		mapState,
+	    mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
 				mode: "aspectFit"
 			}
 		},
+		computed:{
+			...mapState(["isLogin", "isVip", "inPro", "userAuth"])
+		},
 		methods: {
+			getStateTip(n){
+				if(n == 20){
+					return "认证中"
+				}
+				else if(n == 30){
+					return "已完善"
+				}
+				return "未完善"
+			},
 			jump(n){
 				let url;
 				if(n == 0){

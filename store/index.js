@@ -20,7 +20,9 @@ const store = new Vuex.Store({
 		appKey: "BCFFE4852D42A12318C907B20A491EA6",
 		userId: user.userId,
 		token: "",
-		second: 0
+		second: 0,
+		userAuth: {},
+		banks: []
     },
     mutations: {
 		hasRegChange(state, hasReg){
@@ -64,7 +66,13 @@ const store = new Vuex.Store({
 					clearTimeout(timerId)
 				}
 			}, 1000)
-		}
+		},
+		userAuthChange(state, userAuth){
+			state.userAuth = userAuth;
+		},
+		banksChange(state, banks){
+			state.banks = banks;
+		},
     }
 })
 

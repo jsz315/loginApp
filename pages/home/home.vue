@@ -33,6 +33,7 @@
 	import vipGoods from '@/components/vip-goods/vip-goods.vue'
 	import agreement from '@/components/agreement/agreement.vue';
 	import openVip from '@/components/open-vip/open-vip.vue';
+	import api from '../../js/api.js';
 	
 	export default {
 		data() {
@@ -49,9 +50,10 @@
 		    sliderBar, scrollTip, vipGoods, agreement, openVip
 		},
 		computed:{
-			...mapState(["isLogin", "isVip", "inPro"])
+			...mapState(["isLogin", "isVip", "inPro", "userAuth"])
 		},
 		methods: {
+			...mapMutations(['userAuthChange']),
 			jump(){
 				if(!this.check){
 					uni.showToast({
@@ -109,6 +111,12 @@
 		},
 		onTabItemTap(t){
 			console.log(t);
+		},
+		async mounted(){
+			// let res = await api.getUserAuth(this.password);
+			// if(res.code == 200){
+			// 	this.userAuthChange(res.data);
+			// }
 		}
 	}
 </script>
