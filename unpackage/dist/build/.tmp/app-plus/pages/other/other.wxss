@@ -1,0 +1,18 @@
+.box.data-v-17008ef7 {
+  width: 750rpx;
+}
+.box .other-box.data-v-17008ef7 {
+  background: #FFFFFF;
+  padding-bottom: 20rpx;
+  margin-bottom: 90rpx;
+}
+.box .other-box .tip.data-v-17008ef7 {
+  padding: 40rpx;
+  text-align: center;
+  border-bottom: solid 1rpx #f0f0f0;
+  color: #999;
+}
+.box .other-box .add-btn.data-v-17008ef7 {
+  background: #fb6f00;
+}
+

@@ -1,14 +1,5 @@
 <template>
 	<view class="box">
-		<view class="tip">以下为必填资料 填写完善才能申请借款</view>
-		<view class="jrow-box">
-			<view class="jrow-tip">姓名</view>
-			<input class="jrow-input" v-model="account"  placeholder="6-16位字符，包含字母和数字 " type="text"/>
-		</view>
-		<view class="jrow-box">
-			<view class="jrow-tip">身份证号</view>
-			<input class="jrow-input" v-model="account"  placeholder="6-16位字符，包含字母和数字 " type="text"/>
-		</view>
 		<view class="tip1">*须本人身份证，且内容清晰可辨</view>
 		<view class="tip2">*请您确认拍照权限已开启</view>
 		<view class="photo" @click="open(1)">

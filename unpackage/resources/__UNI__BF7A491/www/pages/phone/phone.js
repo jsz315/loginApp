@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"box.",[1],"data-v-ad9274ec { width: ",[0,750],"; }\n.",[1],"box .",[1],"jbtn.",[1],"data-v-ad9274ec { margin-top: ",[0,500],"; }\n.",[1],"box .",[1],"get-code.",[1],"data-v-ad9274ec { width: ",[0,225],"; }\n",],undefined,{path:"./pages/phone/phone.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/phone/phone.wxml') } }));

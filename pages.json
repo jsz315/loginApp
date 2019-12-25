@@ -105,10 +105,28 @@
 				"navigationBarTitleText": "问题解答"
 			}
         }
+		,{
+		    "path" : "pages/phone/phone",
+		    "style" : {
+				"navigationBarTitleText": "手机号认证"
+			}
+		}
         ,{
             "path" : "pages/register/register",
             "style" : {
 				"navigationBarTitleText": "注册账户"
+			}
+        }
+        ,{
+            "path" : "pages/other/other",
+            "style" : {
+				"navigationBarTitleText": "补充资料"
+			}
+        }
+        ,{
+            "path" : "pages/person/person",
+            "style" : {
+				"navigationBarTitleText": "实名认证"
 			}
         }
     ],

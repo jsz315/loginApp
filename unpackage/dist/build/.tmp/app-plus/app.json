@@ -19,7 +19,10 @@
     "pages/custom/custom",
     "pages/push/push",
     "pages/answers/answers",
-    "pages/register/register"
+    "pages/phone/phone",
+    "pages/register/register",
+    "pages/other/other",
+    "pages/person/person"
   ],
   "window": {
     "navigationBarTextStyle": "white",

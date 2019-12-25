@@ -1,4 +1,4 @@
-.box.data-v-12f3c100 {
+.box.data-v-6c71cfae {
   width: 750rpx;
   height: 100%;
   background: rgba(0, 0, 0, 0.72);
@@ -16,26 +16,26 @@
           align-items: center;
   z-index: 10;
 }
-.box .pop-box.data-v-12f3c100 {
+.box .pop-box.data-v-6c71cfae {
   width: 646rpx;
   position: relative;
   background: #FFFFFF;
   border-radius: 12rpx;
 }
-.box .pop-box .title.data-v-12f3c100 {
+.box .pop-box .title.data-v-6c71cfae {
   text-align: center;
   padding: 36rpx;
   border-bottom: solid 1rpx #f0f0f0;
   color: #fd6f00;
 }
-.box .pop-box .word.data-v-12f3c100 {
+.box .pop-box .word.data-v-6c71cfae {
   max-height: 420rpx;
   overflow-y: auto;
   padding: 30rpx;
   color: #999999;
   font-size: 28rpx;
 }
-.box .pop-box .pop-btn.data-v-12f3c100 {
+.box .pop-box .pop-btn.data-v-6c71cfae {
   border-top: solid 1rpx #f0f0f0;
   padding: 20rpx 0;
   color: #682FE9;

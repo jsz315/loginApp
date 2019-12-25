@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "手机号认证",
+  "usingComponents": {
+    "m-input": "/components/m-input",
+    "timer-btn": "/components/timer-btn/timer-btn"
+  }
+}

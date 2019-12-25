@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"box.",[1],"data-v-d9ef04f4 { width: ",[0,750],"; }\n.",[1],"box .",[1],"jbtn.",[1],"data-v-d9ef04f4 { margin-top: ",[0,500],"; }\n.",[1],"box .",[1],"get-code.",[1],"data-v-d9ef04f4 { width: ",[0,225],"; }\n",],undefined,{path:"./pages/find/find.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/find/find.wxml') } }));
