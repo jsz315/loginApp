@@ -115,7 +115,6 @@ async function bindCardSendMsg() {
 	return res.data;
 }
 
-
 async function saveOrUpdate() {
 	let param = {
 		code: 0,
@@ -147,6 +146,20 @@ async function saveOrUpdate() {
 	return res.data;
 }
 
+async function product(current) {
+	let param = {
+		current: current,
+		pageSize: 20,
+		search: "",
+		mobileType: 2,
+		token: store.state.token,
+		userId: store.state.userId
+	}
+	let res = await http.get("/api/vip/loan/product.htm", param);
+	return res.data;
+}
+
+
 export default {
 	isPhoneExists,
 	sendSms,
@@ -157,5 +170,6 @@ export default {
 	getUserAuth,
 	list,
 	bindCardSendMsg,
-	saveOrUpdate
+	saveOrUpdate,
+	product
 }

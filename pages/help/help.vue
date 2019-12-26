@@ -10,9 +10,13 @@
 				<view class="tip-more" @tap="jump(-1)">更多</view>
 			</view>
 			<view class="list">
-				<view class="tip2" @tap="jump(0)">申请人需要具备什么条件？</view>
+				<!-- <view class="tip2" @tap="jump(0)">申请人需要具备什么条件？</view>
 				<view class="tip2" @tap="jump(1)">为什么我有额度，不能借款？</view>
-				<view class="tip2" @tap="jump(2)">我能申请多少金额？分多少期？</view>
+				<view class="tip2" @tap="jump(2)">我能申请多少金额？分多少期？</view> -->
+				
+				<view class="tip2" @tap="jump(0)">成为VIP需要具备什么条件？</view>
+				<view class="tip2" @tap="jump(1)">成为VIP可以享受哪些特权？</view>
+				<view class="tip2" @tap="jump(2)">VIP特权有效期多久？</view>
 			</view>
 		</view>
 		<view class="row">

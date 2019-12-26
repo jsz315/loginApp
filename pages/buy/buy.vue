@@ -148,8 +148,9 @@
 			},
 			showAgree(){
 				// this.popAgree = true;
+				let src = "https://service.vipsave.cn/vip-html/#/serviceProtocol?productName=愿望钱包&companyName=洋德科技&companyFullName=广州洋德网络科技有限";
 				uni.navigateTo({
-					url: "/pages/web/web"
+					url: "/pages/web/web?src=" + encodeURIComponent(src)
 				})
 			}
         },

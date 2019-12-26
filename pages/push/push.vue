@@ -16,29 +16,37 @@
 </template>
 
 <script>
+	import api from '../../js/api.js';
 	export default {
 		data() {
 			return {
 				mode: "aspectFit",
-				list: [1, 2, 3, 4, 5]
+				current: 1,
+				list: []
 			}
 		},
 		methods: {
 			jump(n){
-				let url;
-				if(n == 1){
-					url = '/pages/proof/proof'
-				}
-				else if(n == 2){
-					url = '/pages/company/company'
-				}
-				else if(n == 3){
-					url = '/pages/bank/bank'
-				}
+				let src = "https://www.baidu.com/";
 				uni.navigateTo({
-				    url: url
+				    url: '/pages/web/web?src=' + encodeURIComponent(src)
 				});
+			},
+			async loadPage(){
+				// let res = await api.product(this.current++);
+				// if(res.code == 200){
+				// 	this.list = this.list.concat(res.data);
+				// }
+				for(var i = 0; i < 10; i++){
+					this.list.push(this.list.length);
+				}
 			}
+		},
+		mounted(){
+			this.loadPage();
+		},
+		onReachBottom(){
+			this.loadPage();
 		}
 	}
 </script>

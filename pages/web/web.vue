@@ -13,6 +13,9 @@
 		},
 		methods: {
 			
+		},
+		onLoad(options){
+			this.src = decodeURIComponent(options.src);
 		}
 	}
 </script>
