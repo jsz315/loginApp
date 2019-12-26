@@ -74,7 +74,7 @@
 					url = '/pages/bank/bank'
 				}
 				else if(n == 4){
-					url = '/pages/find/find'
+					url = '/pages/find/find?change=1'
 				}
 				else if(n == 5){
 					this.isLoginChange(false);

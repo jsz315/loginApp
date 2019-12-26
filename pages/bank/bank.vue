@@ -101,13 +101,10 @@
 			},
 			onClose(){
 				this.pop = false;
-				// uni.navigateTo({
-				//     url: '/pages/login/login'
-				// });
+				uni.navigateTo({
+				    url: '/pages/buy/buy'
+				});
 				
-				uni.showModal({
-					
-				})
 			},
 			closeVip(){
 				this.popVip = false;
@@ -115,8 +112,9 @@
 			onSure(){
 				this.pop = true;
 				setTimeout(()=>{
-					this.$refs["jAlert"].showTip("借款申请成功，订单正在审核中，请留意短信和手机通知，谢谢！");
-				}, 90)
+					// this.$refs["jAlert"].showTip("借款申请成功，订单正在审核中，请留意短信和手机通知，谢谢！");
+					this.$refs["jAlert"].showTip("该功能正在开发中");
+				}, 30)
 			}
 		}
 	}

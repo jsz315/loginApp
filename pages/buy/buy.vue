@@ -60,8 +60,8 @@
 				pop: false,
 				popAgree: false,
 				ico: '../../static/img/success.png',
-                src: '../../static/img/chose1.png',
-				check: false,
+                src: '../../static/img/chose2.png',
+				check: true,
                 code: '',
 				account: '',
 				tip: "",
@@ -91,10 +91,10 @@
 					});
 					return;
 				}
-                if (this.code.length < 5) {
+                if (this.code.length < 4) {
                     uni.showToast({
                         icon: 'none',
-                        title: '账号最短为 5 个字符'
+                        title: '请输入正确的验证码'
                     });
                     return;
                 }
@@ -147,7 +147,10 @@
 				this.popAgree = false;
 			},
 			showAgree(){
-				this.popAgree = true;
+				// this.popAgree = true;
+				uni.navigateTo({
+					url: "/pages/web/web"
+				})
 			}
         },
 		onShow(){

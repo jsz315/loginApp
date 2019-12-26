@@ -1,6 +1,7 @@
-.btn.data-v-21252b20 {
+.alert-btn.data-v-1bef611e {
   color: #682FE9;
   height: 100rpx;
   line-height: 100rpx;
+  width: 540rpx;
 }
 

@@ -2,7 +2,7 @@
   width: 750rpx;
   text-align: center;
 }
-.box .tip.data-v-07a7a74d {
+.box .list .tip.data-v-07a7a74d {
   margin: 30rpx;
   color: #999999;
   font-size: 24rpx;

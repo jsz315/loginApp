@@ -100,8 +100,12 @@
 					this.isLoginChange(true);
 					this.tokenChange(res.data.token);
 					this.userIdChange(res.data.userId);
-					uni.switchTab({
-					    url: '/pages/home/home'
+					// uni.switchTab({
+					//     url: '/pages/home/home'
+					// });
+					
+					uni.redirectTo({
+						url: '/pages/bank/bank'
 					});
 				}
 				else{

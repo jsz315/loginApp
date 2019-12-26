@@ -135,26 +135,14 @@
       "backgroundColor": "#ffffff",
       "list": [
         {
-          "pagePath": "pages/home/home",
-          "text": "首页",
-          "iconPath": "static/img/tab10.png",
-          "selectedIconPath": "static/img/tab11.png"
-        },
-        {
           "pagePath": "pages/vip/vip",
-          "text": "VIP办理",
+          "text": "首页",
           "iconPath": "static/img/tab20.png",
           "selectedIconPath": "static/img/tab21.png"
         },
         {
-          "pagePath": "pages/help/help",
-          "text": "助手",
-          "iconPath": "static/img/tab30.png",
-          "selectedIconPath": "static/img/tab31.png"
-        },
-        {
           "pagePath": "pages/mine/mine",
-          "text": "我",
+          "text": "我的",
           "iconPath": "static/img/tab40.png",
           "selectedIconPath": "static/img/tab41.png"
         }

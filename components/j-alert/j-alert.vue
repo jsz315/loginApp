@@ -5,7 +5,7 @@
 			    {{tip}}
 			</template>
 			<template v-slot:btns>
-			    <view class="btn" @tap="onClose">{{label}}</view>
+			    <view class="alert-btn" @tap="onClose">{{label}}</view>
 			</template>
 		</j-pop>
 	</view>

@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/home/home",
+    "pages/vip/vip",
     "pages/login/login",
     "pages/company/company",
-    "pages/vip/vip",
+    "pages/home/home",
     "pages/help/help",
     "pages/mine/mine",
     "pages/info/info",
@@ -13,13 +13,17 @@
     "pages/loan/loan",
     "pages/money/money",
     "pages/law/law",
+    "pages/web/web",
     "pages/find/find",
     "pages/reset/reset",
     "pages/buy/buy",
     "pages/custom/custom",
     "pages/push/push",
     "pages/answers/answers",
-    "pages/register/register"
+    "pages/phone/phone",
+    "pages/register/register",
+    "pages/other/other",
+    "pages/person/person"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -32,26 +36,14 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "static/img/tab10.png",
-        "selectedIconPath": "static/img/tab11.png"
-      },
-      {
         "pagePath": "pages/vip/vip",
-        "text": "VIP办理",
+        "text": "首页",
         "iconPath": "static/img/tab20.png",
         "selectedIconPath": "static/img/tab21.png"
       },
       {
-        "pagePath": "pages/help/help",
-        "text": "助手",
-        "iconPath": "static/img/tab30.png",
-        "selectedIconPath": "static/img/tab31.png"
-      },
-      {
         "pagePath": "pages/mine/mine",
-        "text": "我",
+        "text": "我的",
         "iconPath": "static/img/tab40.png",
         "selectedIconPath": "static/img/tab41.png"
       }

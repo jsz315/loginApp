@@ -30,17 +30,5 @@
 }
 .box .get-code.data-v-7aa2100d {
   width: 225rpx;
-  height: 60rpx;
-  line-height: 60rpx;
-  text-align: center;
-  color: #FFFFFF;
-  background: #682FE9;
-  border-radius: 30rpx;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 20rpx;
-  margin: auto;
-  font-size: 28rpx;
 }
 

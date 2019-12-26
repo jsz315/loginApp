@@ -1,24 +1,24 @@
-.box.data-v-2a4d7166 {
+.box.data-v-27489fd2 {
   width: 750rpx;
 }
-.box .user-box.data-v-2a4d7166 {
+.box .user-box.data-v-27489fd2 {
   text-align: center;
   margin: 40rpx auto;
 }
-.box .user-box .user-img.data-v-2a4d7166 {
+.box .user-box .user-img.data-v-27489fd2 {
   width: 324rpx;
   height: 324rpx;
 }
-.box .tip.data-v-2a4d7166 {
+.box .tip.data-v-27489fd2 {
   color: #1A1A1A;
   text-align: center;
   margin: 30rpx;
 }
-.box .jrow-box.data-v-2a4d7166 {
+.box .jrow-box.data-v-27489fd2 {
   margin-top: 40rpx;
   margin-bottom: 160rpx;
 }
-.box .find-box.data-v-2a4d7166 {
+.box .find-box.data-v-27489fd2 {
   width: 640rpx;
   font-size: 28rpx;
   text-align: right;

@@ -1,26 +1,26 @@
-.box.data-v-433b2fd7 {
+.box.data-v-136d56fc {
   width: 750rpx;
   text-align: center;
 }
-.box .my-box.data-v-433b2fd7 {
+.box .my-box.data-v-136d56fc {
   padding: 40rpx;
   background: #682FE9;
 }
-.box .my-box .img.data-v-433b2fd7 {
+.box .my-box .img.data-v-136d56fc {
   width: 240rpx;
   height: 240rpx;
 }
-.box .my-box .tip.data-v-433b2fd7 {
+.box .my-box .tip.data-v-136d56fc {
   margin-top: 30rpx;
   color: #FFFFFF;
 }
-.box .list.data-v-433b2fd7 {
+.box .list.data-v-136d56fc {
   margin-top: 20rpx;
 }
-.box .list .space.data-v-433b2fd7 {
+.box .list .space.data-v-136d56fc {
   margin-top: 40rpx;
 }
-.box .list .item.data-v-433b2fd7 {
+.box .list .item.data-v-136d56fc {
   background: #FFFFFF;
   display: -webkit-box;
   display: -webkit-flex;
@@ -31,12 +31,12 @@
           align-items: center;
   border-bottom: solid 1rpx #f0f0f0;
 }
-.box .list .item .jico.data-v-433b2fd7 {
+.box .list .item .jico.data-v-136d56fc {
   width: 50rpx;
   height: 50rpx;
   margin-left: 30rpx;
 }
-.box .list .item .jtip.data-v-433b2fd7 {
+.box .list .item .jtip.data-v-136d56fc {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
@@ -44,7 +44,7 @@
   margin-left: 30rpx;
   color: #929292;
 }
-.box .list .item .jarrow.data-v-433b2fd7 {
+.box .list .item .jarrow.data-v-136d56fc {
   width: 30rpx;
   height: 30rpx;
   margin-right: 30rpx;

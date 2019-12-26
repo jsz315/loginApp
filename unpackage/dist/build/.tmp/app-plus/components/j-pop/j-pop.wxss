@@ -17,6 +17,11 @@
   width: 600rpx;
   display: inline-block;
   border-radius: 20rpx;
+  opacity: 0;
+  -webkit-animation: fadeIn-data-v-53b4cc03 300ms;
+          animation: fadeIn-data-v-53b4cc03 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .box .content .tip.data-v-53b4cc03 {
   text-align: center;
@@ -42,5 +47,17 @@
           flex-direction: row;
   -webkit-flex-wrap: nowrap;
           flex-wrap: nowrap;
+}
+@-webkit-keyframes fadeIn-data-v-53b4cc03 {
+0% {
+    -webkit-transform: translateY(60rpx);
+            transform: translateY(60rpx);
+    opacity: 0;
+}
+100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}
 }
 

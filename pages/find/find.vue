@@ -95,6 +95,13 @@
         },
 		onShow(){
 			this.account = this.localAccount
+		},
+		onLoad(options){
+			if(options.change == 1){
+				uni.setNavigationBarTitle({
+				　　title: "修改密码"
+				})
+			}
 		}
     }
 </script>
