@@ -6,6 +6,16 @@ const md5 = require('./js-md5');
 // console.log("md5");
 // console.log(str);
 
+async function homePage(){
+	let param = {
+		mobileType: 2,
+		token: store.state.token,
+		userId: store.state.userId
+	}
+	let res = await http.get("/api/index/homePage.htm", param);
+	return res.data;
+}
+
 async function isPhoneExists(phone){
 	let param = {
 		mobileType: 2,
@@ -28,7 +38,7 @@ async function sendSms(isFind) {
 async function register(code, password) {
 	let param = {
 		agree: 1,
-		client: store.state.info.platform,
+		client: store.state.systemInfo.platform,
 		loginName: store.state.account,
 		loginPwd: md5(password),
 		mobileType: 2,
@@ -54,7 +64,7 @@ async function login(password) {
 
 async function verifySms(code) {
 	let param = {
-		// client: store.state.info.platform,
+		// client: store.state.systemInfo.platform,
 		mobileType: 2,
 		phone: store.state.account,
 		type: "findReg",
@@ -67,7 +77,7 @@ async function verifySms(code) {
 
 async function forgetPwd(code, password) {
 	let param = {
-		// client: store.state.info.platform,
+		// client: store.state.systemInfo.platform,
 		mobileType: 2,
 		phone: store.state.account,
 		newPwd: md5(password),
@@ -147,7 +157,23 @@ async function saveOrUpdate() {
 	return res.data;
 }
 
+
+async function product(current) {
+	let param = {
+		current: current,
+		pageSize: 20,
+		search: "",
+		mobileType: 2,
+		token: store.state.token,
+		userId: store.state.userId
+	}
+	let res = await http.get("/api/vip/loan/product.htm", param);
+	return res.data;
+}
+
+
 export default {
+	homePage,
 	isPhoneExists,
 	sendSms,
 	register,
@@ -157,5 +183,6 @@ export default {
 	getUserAuth,
 	list,
 	bindCardSendMsg,
-	saveOrUpdate
+	saveOrUpdate,
+	product
 }

@@ -19,12 +19,12 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  border-bottom: solid 1rpx #999;
+  border-bottom: solid 1rpx #f0f0f0;
   background: #FFFFFF;
 }
 .box .row .tip1.data-v-0bdd5b2d {
   width: 200rpx;
-  border-right: solid 1rpx #999;
+  border-right: solid 1rpx #f0f0f0;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;

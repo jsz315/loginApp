@@ -33,6 +33,15 @@ const setUser = function (userInfo) {
 	if(userInfo.userId){
 		user.userId = userInfo.userId;
 	}
+	if(userInfo.token){
+		user.token = userInfo.token;
+	}
+	if(userInfo.userAuth){
+		user.userAuth = userInfo.userAuth;
+	}
+	if(userInfo.vipPopTimes){
+		user.vipPopTimes = userInfo.vipPopTimes;
+	}
 	
     uni.setStorageSync(USERS_KEY, JSON.stringify(user));
 }

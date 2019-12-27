@@ -20,7 +20,7 @@
   width: 646rpx;
   height: 764rpx;
   position: relative;
-  background: url(../../static/img/pop-bg.06923f42.png) no-repeat center;
+  background: url(../../static/img/pop-bg.69283dd2.png) no-repeat center;
   background-size: contain;
   color: #FFFFFF;
   text-align: center;

@@ -12,7 +12,7 @@
 		<view class="jrow-box">
 			<view class="jrow-tip">开户银行</view>
 			<view class="jrow-input">
-				<picker v-if="banks.length" @change="bindPickerChange" :value="index" :range="banks">
+				<picker v-if="banks.length" @change="bindPickerChange" range-key="value" :value="index" :range="banks">
 					<view class="uni-input">{{banks[index].value}}</view>
 				</picker>
 			</view>
@@ -62,7 +62,7 @@
 				pop: false,
 				code: "",
 				account: "",
-				popVip: false
+				popVip: false,
 			}
 		},
 		computed:{
@@ -74,7 +74,9 @@
 		methods: {
 			bindPickerChange: function(e) {
 				console.log('picker发送选择改变，携带值为', e.target.value)
-				this.index = e.target.value
+				let n = e.target.value;
+				console.log(this.banks[n]);
+				this.index = n;
 			},
 			async getCode(){
 				let res = await api.bindCardSendMsg();
