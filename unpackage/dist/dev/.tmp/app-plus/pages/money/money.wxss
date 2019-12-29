@@ -1,36 +1,36 @@
-.box.data-v-19eb060f {
+.box.data-v-51b4e918 {
   width: 750rpx;
   text-align: center;
 }
-.box .title-box.data-v-19eb060f {
+.box .title-box.data-v-51b4e918 {
   background: #C8C7CC;
 }
-.box .title-box .none.data-v-19eb060f {
+.box .title-box .none.data-v-51b4e918 {
   width: 500rpx;
   height: 300rpx;
 }
-.box .tip-boxs.data-v-19eb060f {
+.box .tip-boxs.data-v-51b4e918 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
 }
-.box .tip-boxs .tip-box.data-v-19eb060f {
+.box .tip-boxs .tip-box.data-v-51b4e918 {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
 }
-.box .tip-boxs .tip-box tip1.data-v-19eb060f {
+.box .tip-boxs .tip-box tip1.data-v-51b4e918 {
   font-size: 40rpx;
 }
-.box .tip-boxs .tip-box .tip2.data-v-19eb060f {
+.box .tip-boxs .tip-box .tip2.data-v-51b4e918 {
   color: #779900;
 }
-.box .btns.data-v-19eb060f {
+.box .btns.data-v-51b4e918 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
 }
-.box .btns .btn.data-v-19eb060f {
+.box .btns .btn.data-v-51b4e918 {
   background: #007AFF;
   color: #DDDDDD;
   margin: 20rpx;
@@ -41,14 +41,14 @@
   line-height: 80rpx;
   text-align: center;
 }
-.box .todo.data-v-19eb060f {
+.box .todo.data-v-51b4e918 {
   width: 700rpx;
   margin: 20rpx auto;
   background: #C8C7CC;
   border: solid 1rpx #DDDDDD;
   border-radius: 10rpx;
 }
-.box .todo .jinput.data-v-19eb060f {
+.box .todo .jinput.data-v-51b4e918 {
   background: #FFFFFF;
   border: solid 1rpx #DDDDDD;
   border-radius: 10rpx;
@@ -62,17 +62,17 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.box .todo .jinput .num-txt.data-v-19eb060f {
+.box .todo .jinput .num-txt.data-v-51b4e918 {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
   padding: 30rpx;
   text-align: left;
 }
-.box .todo .jinput .num-tip.data-v-19eb060f {
+.box .todo .jinput .num-tip.data-v-51b4e918 {
   margin-left: 20rpx;
 }
-.box .saft-tip.data-v-19eb060f {
+.box .saft-tip.data-v-51b4e918 {
   text-align: center;
   margin: 30rpx auto;
 }

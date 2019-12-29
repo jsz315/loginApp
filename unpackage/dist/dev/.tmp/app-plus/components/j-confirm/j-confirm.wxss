@@ -1,11 +1,11 @@
-.btn.data-v-0d9edf4e {
+.btn.data-v-0a9ba3f0 {
   color: #999999;
   height: 100rpx;
   line-height: 100rpx;
   width: 294rpx;
   display: inline-block;
 }
-.row-tip.data-v-0d9edf4e {
+.row-tip.data-v-0a9ba3f0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -16,17 +16,17 @@
   -webkit-justify-content: center;
           justify-content: center;
 }
-.row-tip .row-ico.data-v-0d9edf4e {
+.row-tip .row-ico.data-v-0a9ba3f0 {
   width: 68rpx;
   height: 68rpx;
   margin-right: 20rpx;
 }
-.sub-tip.data-v-0d9edf4e {
+.sub-tip.data-v-0a9ba3f0 {
   color: #ADADAD;
   font-size: 24rpx;
   padding-top: 20rpx;
 }
-.sure.data-v-0d9edf4e {
+.sure.data-v-0a9ba3f0 {
   color: #682FE9;
   border-left: solid 1rpx #f0f0f0;
 }

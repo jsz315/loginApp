@@ -42,6 +42,12 @@
         "selectedIconPath": "static/img/tab21.png"
       },
       {
+        "pagePath": "pages/help/help",
+        "text": "助手",
+        "iconPath": "static/img/tab30.png",
+        "selectedIconPath": "static/img/tab31.png"
+      },
+      {
         "pagePath": "pages/mine/mine",
         "text": "我的",
         "iconPath": "static/img/tab40.png",

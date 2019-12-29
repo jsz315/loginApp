@@ -84,13 +84,14 @@
 			</view>
 		</view>
 		
-		<view class="jbtn">提交</view>
+		<view class="jbtn" @tap="submit">提交</view>
 		<simple-address ref="simpleAddress" :pickerValueDefault="cityPickerValueDefault" @onConfirm="onConfirm" themeColor='#007AFF'></simple-address>
 	</view>
 </template>
 
 <script>
 	import simpleAddress from "@/components/simple-address/simple-address.nvue"
+	import api from '../../js/api.js';
 	
 	export default {
 		data() {
@@ -117,6 +118,16 @@
 				console.log('picker发送选择改变，携带值为', e.target.value)
 				this.index = e.target.value
 			},
+			async submit(){
+				let param = {
+					
+				}
+				let res = await api.mineSave(param);
+				uni.showToast({
+					icon: 'none',
+					title: res.msg
+				});
+			}
 		}
 	}
 </script>

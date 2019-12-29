@@ -1,24 +1,24 @@
-.box.data-v-19d4b0be {
+.box.data-v-2adf8aaa {
   width: 750rpx;
 }
-.box .user-box.data-v-19d4b0be {
+.box .user-box.data-v-2adf8aaa {
   text-align: center;
   margin: 40rpx auto;
 }
-.box .user-box .user-img.data-v-19d4b0be {
+.box .user-box .user-img.data-v-2adf8aaa {
   width: 324rpx;
   height: 324rpx;
 }
-.box .tip.data-v-19d4b0be {
+.box .tip.data-v-2adf8aaa {
   color: #1A1A1A;
   text-align: center;
   margin: 30rpx;
 }
-.box .jrow-box.data-v-19d4b0be {
+.box .jrow-box.data-v-2adf8aaa {
   margin-top: 40rpx;
   margin-bottom: 160rpx;
 }
-.box .find-box.data-v-19d4b0be {
+.box .find-box.data-v-2adf8aaa {
   width: 640rpx;
   font-size: 28rpx;
   text-align: right;

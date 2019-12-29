@@ -4,12 +4,12 @@
 		<view class="tip">请选择以下平台进行借款</view>
 		<view class="list">
 			<view class="item" v-for="item in list" v-bind:key="item" @tap="jump(item)">
-				<image class="jico" :mode="mode" src="../../static/img/g_03.png"></image>
+				<image class="jico" :mode="mode" :src="item.dcLoanIcon"></image>
 				<view class="info">
-					<view class="tip1">用钱宝</view>
+					<view class="tip1">{{item.dcLoanName}}</view>
 					<view class="tip2">利率超低，3小时极速放款</view>
 				</view>
-				<text class="tip3">不完整</text>
+				<text class="tip3">去借款</text>
 			</view>
 		</view>
 	</view>
@@ -26,19 +26,19 @@
 			}
 		},
 		methods: {
-			jump(n){
-				let src = "https://www.baidu.com/";
+			jump(item){
+				let src = item.dcLoanURL;
 				uni.navigateTo({
-				    url: '/pages/web/web?src=' + encodeURIComponent(src)
+				    url: "/pages/web/web?src=" + encodeURIComponent(src)
 				});
 			},
 			async loadPage(){
-				// let res = await api.product(this.current++);
-				// if(res.code == 200){
-				// 	this.list = this.list.concat(res.data);
-				// }
-				for(var i = 0; i < 10; i++){
-					this.list.push(this.list.length);
+				if(++this.current <= this.total){
+					let res = await api.product(this.current);
+					if(res.code == 200){
+						this.list = this.list.concat(res.data);
+						this.total = rs.data.page.total;
+					}
 				}
 			}
 		},

@@ -14,6 +14,7 @@ App.mpType = 'app'
 
 init.initBank();
 init.initAuth();
+init.initHomePage();
 
 const app = new Vue({
     store,

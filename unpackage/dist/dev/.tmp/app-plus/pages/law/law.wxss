@@ -1,10 +1,10 @@
-.box.data-v-1a0f0013 {
+.box.data-v-344dcf9c {
   width: 750rpx;
 }
-.box .word.data-v-1a0f0013 {
+.box .word.data-v-344dcf9c {
   padding: 40rpx;
 }
-.box .word .title.data-v-1a0f0013 {
+.box .word .title.data-v-344dcf9c {
   width: 300rpx;
   margin: 20rpx auto 60rpx;
   text-align: center;
@@ -13,7 +13,7 @@
   padding-bottom: 20rpx;
   border-bottom: solid 8rpx #007AFF;
 }
-.box .word .jp.data-v-1a0f0013 {
+.box .word .jp.data-v-344dcf9c {
   color: #999;
   margin-bottom: 20rpx;
 }

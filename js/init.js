@@ -1,5 +1,6 @@
 import api from './api.js';
 import store from "../store/index.js";
+import pop from './pop.js'
 
 async function initBank(){
 	let res = await api.list();
@@ -15,7 +16,34 @@ async function initAuth(){
 	}
 }
 
+async function initHomePage(){
+	let res = await api.homePage();
+	if(res.code == 200){
+		store.commit("isVipChange", res.data.member == 1);
+		
+		// #ifdef APP-PLUS
+		if(res.data.member != 1){
+			setTimeout(()=>{
+				doPopVip();
+			}, 60 * 1000 * 3)
+		}
+		// #endif
+		
+	}
+}
+
+function doPopVip(){
+	if(!store.state.isVip && !store.state.isPopVip){
+		store.commit("isPopVipChange", true);
+		pop.vip();
+	}
+	setTimeout(()=>{
+		doPopVip();
+	}, 1000 * 3600 * 4)
+}
+
 export default {
 	initBank,
-	initAuth
+	initAuth,
+	initHomePage
 }

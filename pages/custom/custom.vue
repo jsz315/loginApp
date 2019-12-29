@@ -3,7 +3,7 @@
 		<image class="img" src="../../static/img/custom2.png" mode="aspectFill"></image>
 		<view class="jrow-box">
 			<view class="jrow-tip">客服电话(9:30-18:30)</view>
-			<view class="jrow-input" @tap="callPhone">400-991-6799</view>
+			<view class="jrow-input" @tap="callPhone">400-991-6797</view>
 		</view>
 	</view>
 </template>

@@ -1,15 +1,16 @@
-.box.data-v-1f327f8e {
+.box.data-v-c9f4127c {
   width: 750rpx;
 }
-.box .item.data-v-1f327f8e {
+.box .item.data-v-c9f4127c {
   padding: 20rpx 30rpx;
   border-bottom: solid 1rpx #f0f0f0;
+  background: #FFFFFF;
 }
-.box .item .quest.data-v-1f327f8e {
+.box .item .quest.data-v-c9f4127c {
   color: #666;
   padding: 10rpx 0;
 }
-.box .item .answer.data-v-1f327f8e {
+.box .item .answer.data-v-c9f4127c {
   color: #999;
   border-top: solid 1rpx #f0f0f0;
   padding: 20rpx 0;

@@ -1,2 +1,2 @@
-setCssToHead([".",[1],"box.",[1],"data-v-ebb7e726 { width: ",[0,750],"; }\n.",[1],"box .",[1],"jbtn.",[1],"data-v-ebb7e726 { margin-top: ",[0,500],"; }\n.",[1],"box .",[1],"get-code.",[1],"data-v-ebb7e726 { width: ",[0,225],"; }\n",],undefined,{path:"./pages/register/register.wxss"})();
+setCssToHead([".",[1],"box.",[1],"data-v-09cfc4b6 { width: ",[0,750],"; }\n.",[1],"box .",[1],"jbtn.",[1],"data-v-09cfc4b6 { margin-top: ",[0,500],"; }\n.",[1],"box .",[1],"get-code.",[1],"data-v-09cfc4b6 { width: ",[0,225],"; }\n",],undefined,{path:"./pages/register/register.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/register/register.wxml') } }));

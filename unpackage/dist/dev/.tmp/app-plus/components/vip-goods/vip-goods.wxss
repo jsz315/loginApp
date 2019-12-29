@@ -1,7 +1,7 @@
-.box .title-tip.data-v-28db22ab {
+.box .title-tip.data-v-3a463642 {
   padding: 20rpx 30rpx;
 }
-.box .row-img.data-v-28db22ab {
+.box .row-img.data-v-3a463642 {
   margin: 1rpx auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -11,11 +11,11 @@
           justify-content: center;
   text-align: center;
 }
-.box .row1-img.data-v-28db22ab {
+.box .row1-img.data-v-3a463642 {
   width: 360rpx;
   height: 280rpx;
 }
-.box .row2-img.data-v-28db22ab {
+.box .row2-img.data-v-3a463642 {
   width: 690rpx;
   height: 280rpx;
 }

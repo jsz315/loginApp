@@ -10,23 +10,28 @@ console.log(baseParam)
 
 function toSearch(param){
 	let list = [];
-	for(var i in param){
+	for(let i in baseParam){
+		param[i] = baseParam[i];
+	}
+	for(let i in param){
 		list.push(i + "=" + param[i]);
 	}
+	
 	let signMsg = md5(store.state.appKey + store.state.token + list.join("|"));
 	list.push("signMsg=" + signMsg);
+	param.signMsg = signMsg;
 	let aim = list.join("&");
 	return [aim, signMsg];
 }
 
 function get(url, param){
 	return new Promise(resolve => {
-		let allData = Object.assign(baseParam, param);
-		console.log(allData);
+		// let allData = Object.assign(baseParam, param);
+		// console.log(allData);
 		if(url.substr(0, 4) != "http"){
 			url = baseHost + url;
 		}
-		let search = toSearch(allData);
+		let search = toSearch(param);
 		uni.request({
 			url: url + "?" + search[0],
 			method: 'GET',
@@ -46,13 +51,23 @@ function get(url, param){
 
 function post(url, param){
 	return new Promise(resolve => {
-		let allData = Object.assign(baseParam, param);
+		// let allData = Object.assign(baseParam, param);
+		// console.log(allData);
+		if(url.substr(0, 4) != "http"){
+			url = baseHost + url;
+		}
+		let search = toSearch(param);
 		uni.request({
-			url: baseHost + url,
-			data: JSON.stringify(allData),
+			url: url,
+			data: param,
 			method: 'POST',
 			dataType: 'json',
 			responseType: 'text',
+			header:{
+				token: store.state.token,
+				signMsg: search[1],
+				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+			},
 			success: (res) => {
 				console.log(res);
 				resolve(res);

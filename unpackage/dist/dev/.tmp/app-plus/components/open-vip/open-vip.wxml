@@ -1,1 +1,1 @@
-<view class="box data-v-32b6451d"><view class="pop-box data-v-32b6451d"><view class="pop-txt data-v-32b6451d">恭喜您!</view><view data-event-opts="{{[['tap',[['onClose',['$event']]]]]}}" class="pop-btn data-v-32b6451d" bindtap="__e">去开通</view></view></view>
+<view class="box data-v-3e2f5274"><view class="pop-box data-v-3e2f5274"><view class="pop-txt data-v-3e2f5274">恭喜您!</view><view data-event-opts="{{[['tap',[['onClose',['$event']]]]]}}" class="pop-btn data-v-3e2f5274" bindtap="__e">去开通</view></view></view>

@@ -5,7 +5,10 @@ import service from '../service.js'
 Vue.use(Vuex)
 
 let user = service.getUser();
-let info = uni.getSystemInfoSync();
+let systemInfo = uni.getSystemInfoSync();
+console.log("systemInfo");
+console.log(systemInfo);
+
 let timerId = 0;
 
 const store = new Vuex.Store({
@@ -16,13 +19,15 @@ const store = new Vuex.Store({
 		isLogin: !!user.isLogin,
 		isVip: !!user.isVip,
 		inPro: !!user.inPro,
-		info: info,
-		appKey: "BCFFE4852D42A12318C907B20A491EA6",
 		userId: user.userId,
-		token: "",
+		token: user.token,
+		userAuth: user.userAuth || {},
+		systemInfo: systemInfo,
+		appKey: "BCFFE4852D42A12318C907B20A491EA6",
 		second: 0,
-		userAuth: {},
-		banks: []
+		banks: [],
+		vipPopTimes: user.vipPopTimes || 0,
+		isPopVip: false
     },
     mutations: {
 		hasRegChange(state, hasReg){
@@ -54,6 +59,7 @@ const store = new Vuex.Store({
 		},
 		tokenChange(state, token){
 			state.token = token;
+			updateLocalData(state);
 		},
 		userIdChange(state, userId){
 			state.userId = userId;
@@ -69,15 +75,23 @@ const store = new Vuex.Store({
 		},
 		userAuthChange(state, userAuth){
 			state.userAuth = userAuth;
+			updateLocalData(state);
 		},
 		banksChange(state, banks){
 			state.banks = banks;
 		},
+		vipPopTimesChange(state, vipPopTimes){
+			state.vipPopTimes = vipPopTimes;
+			updateLocalData(state);
+		},
+		isPopVipChange(state, isPopVip){
+			state.isPopVip = isPopVip;
+		}
     }
 })
 
-function updateLocalData(info){
-	service.setUser(info);
+function updateLocalData(state){
+	service.setUser(state);
 }
 
 export default store

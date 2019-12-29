@@ -1,13 +1,13 @@
-.box.data-v-07a7a74d {
+.box.data-v-e51e8ed4 {
   width: 750rpx;
   text-align: center;
 }
-.box .list .tip.data-v-07a7a74d {
+.box .list .tip.data-v-e51e8ed4 {
   margin: 30rpx;
   color: #999999;
   font-size: 24rpx;
 }
-.box .list .item.data-v-07a7a74d {
+.box .list .item.data-v-e51e8ed4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -18,30 +18,30 @@
   background: #FFFFFF;
   padding: 30rpx 0;
 }
-.box .list .item .jico.data-v-07a7a74d {
+.box .list .item .jico.data-v-e51e8ed4 {
   width: 64rpx;
   height: 64rpx;
   margin-left: 30rpx;
 }
-.box .list .item .info.data-v-07a7a74d {
+.box .list .item .info.data-v-e51e8ed4 {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
   text-align: left;
   margin-left: 30rpx;
 }
-.box .list .item .info .tip1.data-v-07a7a74d {
+.box .list .item .info .tip1.data-v-e51e8ed4 {
   color: #333;
 }
-.box .list .item .info .tip2.data-v-07a7a74d {
+.box .list .item .info .tip2.data-v-e51e8ed4 {
   color: #999;
   font-size: 24rpx;
 }
-.box .list .item .tip3.data-v-07a7a74d {
+.box .list .item .tip3.data-v-e51e8ed4 {
   margin-right: 20rpx;
   color: #fb6f00;
 }
-.box .jbtn.data-v-07a7a74d {
+.box .jbtn.data-v-e51e8ed4 {
   margin-top: 100rpx;
 }
 
