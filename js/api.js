@@ -114,14 +114,14 @@ async function bindCardSendMsg(id, name) {
 	let param = {
 		mobileType: 2,
 		cardHolderId: id,
-		cardHolderName: name,
+		cardHolderName: encodeURIComponent(name),
 		customerId: 1,
 		externalRefNumber: 1,
 		phoneNO: store.state.account,
 		token: store.state.token,
 		userId: store.state.userId
 	}
-	let res = await http.get("/api/pay/CJ/bindCardSendMsg.htm", param);
+	let res = await http.post("/api/pay/CJ/bindCardSendMsg.htm", param);
 	return res.data;
 }
 

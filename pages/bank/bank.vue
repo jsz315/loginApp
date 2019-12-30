@@ -83,7 +83,7 @@
 				this.index = n;
 			},
 			async getCode(){
-				let res = await api.bindCardSendMsg();
+				let res = await api.bindCardSendMsg(this.cardHolderId, this.cardHolderName);
 				if(res.code == 200){
 					if(res.data.state == 10){
 						uni.showToast({
@@ -108,7 +108,7 @@
 			onClose(){
 				this.pop = false;
 				uni.navigateTo({
-				    url: '/pages/buy/buy'
+				    url: '/pages/home/home'
 				});
 				
 			},
@@ -118,8 +118,8 @@
 			onSure(){
 				this.pop = true;
 				setTimeout(()=>{
-					// this.$refs["jAlert"].showTip("借款申请成功，订单正在审核中，请留意短信和手机通知，谢谢！");
-					this.$refs["jAlert"].showTip("该功能正在开发中");
+					this.$refs["jAlert"].showTip("借款申请成功，订单正在审核中，请留意短信和手机通知，谢谢！");
+					// this.$refs["jAlert"].showTip("该功能正在开发中");
 				}, 30)
 			}
 		},

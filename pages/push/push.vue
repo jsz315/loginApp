@@ -21,7 +21,8 @@
 		data() {
 			return {
 				mode: "aspectFit",
-				current: 1,
+				current: 0,
+				total: 1,
 				list: []
 			}
 		},
