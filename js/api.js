@@ -110,14 +110,16 @@ async function list() {
 	return res.data;
 }
 
-async function bindCardSendMsg(id, name) {
+async function bindCardSendMsg(id, name, pan, backCode) {
 	let param = {
 		mobileType: 2,
-		cardHolderId: id,
-		cardHolderName: encodeURIComponent(name),
-		customerId: 1,
-		externalRefNumber: 1,
-		phoneNO: store.state.account,
+		cardHolderId: id || "342921198810100029",
+		cardHolderName: encodeURIComponent("刘伟"),
+		customerId: "300044",
+		pan: pan || "6225800624985628",
+		backCode: backCode || "ICBC",
+		externalRefNumber: "88650a986521482298126bb4a892bf78",
+		phoneNO: store.state.account || "18667175692",
 		token: store.state.token,
 		userId: store.state.userId
 	}

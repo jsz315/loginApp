@@ -19,7 +19,7 @@
 		</view>
 		<view class="jrow-box">
 			<view class="jrow-tip">银行卡卡号</view>
-			<input class="jrow-input" v-model="account"  placeholder="请输入银行卡卡号" type="text"/>
+			<input class="jrow-input" v-model="pan"  placeholder="请输入银行卡卡号" type="text"/>
 		</view>
 		<view class="space"></view>
 		<view class="jrow-box">
@@ -62,11 +62,12 @@
 				index: 0,
 				pop: false,
 				code: "",
-				account: "",
+				pan: "",
 				popVip: false,
 				cardHolderName: "",
 				cardHolderId: "",
 				phoneNO: "",
+				backCode: "",
 			}
 		},
 		computed:{
@@ -81,9 +82,10 @@
 				let n = e.target.value;
 				console.log(this.banks[n]);
 				this.index = n;
+				this.backCode = this.banks[n].code;
 			},
 			async getCode(){
-				let res = await api.bindCardSendMsg(this.cardHolderId, this.cardHolderName);
+				let res = await api.bindCardSendMsg(this.cardHolderId, this.cardHolderName, this.pan, this.backCode);
 				if(res.code == 200){
 					if(res.data.state == 10){
 						uni.showToast({
