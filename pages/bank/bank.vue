@@ -64,19 +64,34 @@
 				code: "",
 				pan: "",
 				popVip: false,
-				cardHolderName: "",
-				cardHolderId: "",
 				phoneNO: "",
 				backCode: "",
 			}
 		},
 		computed:{
-			...mapState(["banks"])
+			...mapState(["banks"]),
+			cardHolderName: {
+				get(){
+					return this.$store.state.cardHolderName;
+				},
+				set(val){
+					this.cardHolderNameChange(val);
+				}
+			},
+			cardHolderId: {
+				get(){
+					return this.$store.state.cardHolderId;
+				},
+				set(val){
+					this.cardHolderIdChange(val);
+				}
+			}
 		},
 		components: {
 		    jAlert, openVip, timerBtn
 		},
 		methods: {
+			...mapMutations(['cardHolderNameChange', 'cardHolderIdChange']),
 			bindPickerChange: function(e) {
 				console.log('picker发送选择改变，携带值为', e.target.value)
 				let n = e.target.value;

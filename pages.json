@@ -142,13 +142,13 @@
 		"selectedColor": "#7F5FF6",
 		"backgroundColor": "#ffffff",
 		"list": [{
-		// 	"pagePath": "pages/home/home",
-		// 	"text": "首页",
-		// 	"iconPath": "static/img/tab10.png",
-		// 	"selectedIconPath": "static/img/tab11.png"
-		// }, {
-			"pagePath": "pages/vip/vip",
+			"pagePath": "pages/home/home",
 			"text": "首页",
+			"iconPath": "static/img/tab10.png",
+			"selectedIconPath": "static/img/tab11.png"
+		}, {
+			"pagePath": "pages/vip/vip",
+			"text": "VIP",
 			"iconPath": "static/img/tab20.png",
 			"selectedIconPath": "static/img/tab21.png"
 		}, {

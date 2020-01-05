@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import service from '../service.js'
+import tooler from '../js/tooler.js'
 
 Vue.use(Vuex)
 
@@ -27,7 +28,9 @@ const store = new Vuex.Store({
 		second: 0,
 		banks: [],
 		vipPopTimes: user.vipPopTimes || 0,
-		isPopVip: false
+		isPopVip: false,
+		cardHolderName: user.cardHolderName || "",
+		cardHolderId: user.cardHolderId || ""
     },
     mutations: {
 		hasRegChange(state, hasReg){
@@ -86,6 +89,18 @@ const store = new Vuex.Store({
 		},
 		isPopVipChange(state, isPopVip){
 			state.isPopVip = isPopVip;
+		},
+		cardHolderNameChange(state, cardHolderName){
+			state.cardHolderName = cardHolderName;
+			tooler.delay(()=>{
+				updateLocalData(state);
+			}, 900);
+		},
+		cardHolderIdChange(state, cardHolderId){
+			state.cardHolderId = cardHolderId;
+			tooler.delay(()=>{
+				updateLocalData(state);
+			}, 900);
 		}
     }
 })

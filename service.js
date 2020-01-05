@@ -42,6 +42,12 @@ const setUser = function (userInfo) {
 	if(userInfo.vipPopTimes){
 		user.vipPopTimes = userInfo.vipPopTimes;
 	}
+	if(userInfo.cardHolderName){
+		user.cardHolderName = userInfo.cardHolderName;
+	}
+	if(userInfo.cardHolderId){
+		user.cardHolderId = userInfo.cardHolderId;
+	}
 	
     uni.setStorageSync(USERS_KEY, JSON.stringify(user));
 }
