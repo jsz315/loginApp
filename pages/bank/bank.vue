@@ -124,9 +124,10 @@
 			},
 			onClose(){
 				this.pop = false;
-				uni.navigateTo({
+				uni.switchTab({
 				    url: '/pages/home/home'
 				});
+				init.initHomePage();
 				
 			},
 			closeVip(){
