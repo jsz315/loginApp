@@ -19,7 +19,7 @@
 				<image class="jico" :mode="mode" src="../../static/img/g_03.png"></image>
 				<view class="info" @click="jump(1)">
 					<view class="tip1">身份信息</view>
-					<view class="tip2">*让我们了解您的基本情况</view>
+					<view class="tip2">*请进行身份证认证</view>
 				</view>
 				<text class="tip3">{{getStateTip(userAuth.idState)}}</text>
 				<view class="jarrow"></view>

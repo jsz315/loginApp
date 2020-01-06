@@ -1,17 +1,17 @@
 <template>
 	<view class="all">
 		<view class="box">
-			<view class="tip1">申请金额（元）</view>
+			<view class="tip1">{{isAuthentication ? "获得额度（元）" : "申请金额（元）"}}</view>
 			<view class="tip2">￥{{num1}}</view>
 			<view class="bar">
 				<view class="nbtn cut"></view>
 				<view class="line">
-					<slider value="3000" min="3000" max="200000" @changing="sliderChange" activeColor="#FFCC33" backgroundColor="#000000" block-color="#8A6DE9"
+					<slider :value="num" :min="min" max="200000" @change="sliderChange" @changing="sliderChange" activeColor="#FFCC33" backgroundColor="#000000" block-color="#8A6DE9"
 					 block-size="20" />
 				</view>
 				<view class="nbtn add"></view>
 			</view>
-			<view class="tip3">3000元</view>
+			<view class="tip3">{{num}}元</view>
 			<view class="tip4">200000元</view>
 		</view>
 		<view class="tip5">借款期限</view>
@@ -32,12 +32,25 @@
 	export default {
 	    data() {
 	        return {
+				min: 3000,
 				num: 3000,
 				cur: 1,
 				list: [1, 3, 6, 9, 12, 24, 36]
 			}
 	    },
 		computed:{
+			isAuthentication(){
+				var t = this.$store.state.authentication == "4/4";
+				if(t){
+					this.num = 8000;
+					this.min = 8000;
+				}
+				else{
+					this.num = 3000;
+					this.min = 3000;
+				}
+				return t;
+			},
 			num1(){
 				return this.num + ".00";
 			},

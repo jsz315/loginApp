@@ -12,8 +12,11 @@
 		</view>
 		 
 		<view v-if="hasReg">
-			<view class="tip">{{account}}</view>
-			<view class="jrow-box">
+			<view class="jrow-box jrow-box2">
+				<input class="jrow-input" v-model="account"  placeholder="请输入注册/登录手机号" type="text"/>
+			</view>
+			<!-- <view class="tip">{{account}}</view> -->
+			<view class="jrow-box jrow-box3">
 				<input class="jrow-input" v-model="password"  placeholder="请输入登录密码" type="password"/>
 			</view>
 			<view class="jbtn" @tap="onLogin">登录</view>

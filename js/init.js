@@ -20,6 +20,7 @@ async function initHomePage(){
 	let res = await api.homePage();
 	if(res.code == 200){
 		store.commit("isVipChange", res.data.member == 1);
+		store.commit("authenticationChange", res.data.authentication);
 		
 		// #ifdef APP-PLUS
 		if(res.data.member != 1){

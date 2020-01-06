@@ -30,7 +30,8 @@ const store = new Vuex.Store({
 		vipPopTimes: user.vipPopTimes || 0,
 		isPopVip: false,
 		cardHolderName: user.cardHolderName || "",
-		cardHolderId: user.cardHolderId || ""
+		cardHolderId: user.cardHolderId || "",
+		authentication: "0/4"
     },
     mutations: {
 		hasRegChange(state, hasReg){
@@ -101,6 +102,9 @@ const store = new Vuex.Store({
 			tooler.delay(()=>{
 				updateLocalData(state);
 			}, 900);
+		},
+		authenticationChange(state, authentication){
+			state.authentication = authentication;
 		}
     }
 })

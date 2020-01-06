@@ -141,23 +141,23 @@ async function realNameSave(idNo, name){
 
 async function mineSave(data) {
 	let param = {
-		code: 0,
-		codeName: 0,
-		detailAddr: 0,
-		education: 0,
-		email: 0,
-		id: 0,
-		liveAddr: 0,
-		liveCoordinate: 0,
-		mac: 0,
-		marryState: 0,
-		name: 0,
+		code: data.code,
+		codeName: data.codeName,
+		detailAddr: data.detailAddr,
+		liveAddr: data.liveAddr,
+		relation: data.relation,
+		name: data.name,
+		phone: data.phone,
+		education: "初中及小学以下",
+		email: "Hh@11.com",
+		id: "0,0",
+		liveCoordinate: "120.082479,30.271490",
+		mac: "88:36:5F:B9:2D:AD",
+		marryState: 1,
 		operatingSystem: 0,
-		phone: 0,
-		phoneBrand: 0,
-		phoneMark: 0,
-		phoneType: 0,
-		relation: 0,
+		phoneBrand: "google",
+		phoneMark: "-1",
+		phoneType: "Pixel 2 XL",
 		systemVersions: 0,
 		type: 0,
 		versionCode: 0,
@@ -184,6 +184,15 @@ async function product(current) {
 	return res.data;
 }
 
+async function authentication(frontImg, backImg) {
+	let param = {
+		frontImg: frontImg,
+		backImg: backImg,
+		userId: store.state.userId
+	}
+	let res = await http.post("/api/ocr/glad/authentication.htm", param);
+	return res.data;
+}
 
 export default {
 	homePage,
@@ -198,5 +207,6 @@ export default {
 	bindCardSendMsg,
 	realNameSave,
 	mineSave,
-	product
+	product,
+	authentication
 }

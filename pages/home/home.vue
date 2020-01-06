@@ -50,7 +50,7 @@
 		    sliderBar, scrollTip, vipGoods, agreement, openVip
 		},
 		computed:{
-			...mapState(["isLogin", "isVip", "inPro", "userAuth"])
+			...mapState(["isLogin", "isVip", "inPro", "userAuth", "authentication"])
 		},
 		methods: {
 			...mapMutations(['userAuthChange']),
@@ -68,12 +68,17 @@
 						url = '/pages/info/info'
 					}
 					else{
-						if(this.isVip){
-							url = '/pages/push/push'
+						if(this.authentication){
+							if(this.isVip){
+								url = '/pages/push/push'
+							}
+							else{
+								this.popBuy = true;
+								return;
+							}
 						}
 						else{
-							this.popBuy = true;
-							return;
+							url = '/pages/info/info'
 						}
 					}
 				}
