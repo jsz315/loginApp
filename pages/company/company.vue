@@ -92,6 +92,7 @@
 <script>
 	import simpleAddress from "@/components/simple-address/simple-address.nvue"
 	import api from '../../js/api.js';
+	import service from '../../service.js';
 	
 	export default {
 		data() {
@@ -100,10 +101,10 @@
 				companyStaff: "",
 				companyPhone: "",
 				workYears: "",
-				companyAddress: "",
+				companyAddress: "请选择地区",
 				companyDetailAddr: "",
 				inCome: "",
-				liveAddr: "",
+				liveAddr: "请选择地区",
 				detailAddr: "",
 				code: "",
 				familyName: "",
@@ -122,6 +123,27 @@
 		},
 		components: {
 		    simpleAddress
+		},
+		mounted(){
+			let info = service.getInfo();
+			this.companyName = info.companyName;
+			this.companyStaff = info.companyStaff;
+			this.companyPhone = info.companyPhone;
+			this.workYears = info.workYears;
+			this.companyAddress = info.companyAddress;
+			this.companyDetailAddr = info.companyDetailAddr;
+			this.inCome = info.inCome;
+			this.liveAddr = info.liveAddr;
+			this.detailAddr = info.detailAddr;
+			this.code = info.code;
+			this.familyName = info.familyName;
+			this.familyPhone = info.familyPhone;
+			this.otherName = info.otherName;
+			this.otherPhone = info.otherPhone;
+			// this.findex = info.findex;
+			// this.aindex = info.aindex;
+			this.companyCode = info.companyCode;
+			this.liveCode = info.liveCode;
 		},
 		methods: {
 			openAddres(n) {
@@ -158,6 +180,27 @@
 					name: [this.familyName, this.otherName].join(","),
 					phone: [this.familyPhone, this.otherPhone].join(","),
 				}
+				
+				service.setInfo({
+					companyName: this.companyName,
+					companyStaff: this.companyStaff,
+					companyPhone: this.companyPhone,
+					workYears: this.workYears,
+					companyAddress: this.companyAddress,
+					companyDetailAddr: this.companyDetailAddr,
+					inCome: this.inCome,
+					liveAddr: this.liveAddr,
+					detailAddr: this.detailAddr,
+					code: this.code,
+					familyName: this.familyName,
+					familyPhone: this.familyPhone,
+					otherName: this.otherName,
+					otherPhone: this.otherPhone,
+					// findex: this.findex,
+					// aindex: this.aindex,
+					companyCode: this.companyCode,
+					liveCode: this.liveCode
+				});
 				let res = await api.mineSave(param);
 				uni.showToast({
 					icon: 'none',

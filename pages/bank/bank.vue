@@ -53,6 +53,7 @@
 	import timerBtn from '../../components/timer-btn/timer-btn.vue';
 	import api from '../../js/api.js';
 	import init from '../../js/init.js';
+	import service from '../../service.js';
 	
 	// let bankList = ["工商银行", "中国银行", "建设银行", "招商银行", "广发银行", "邮储银行", "农业银行", "兴业银行", "平安银行", "中信银行", "华夏银行", "光大银行", "浦发银行", "民生银行"];
 	

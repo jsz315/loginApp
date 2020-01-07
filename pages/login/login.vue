@@ -33,6 +33,7 @@
         mapMutations
     } from 'vuex'
 	import api from '../../js/api.js';
+	import init from '../../js/init.js';
     import mInput from '../../components/m-input.vue'
 
     export default {
@@ -49,7 +50,7 @@
             }
         },
 		computed:{
-			...mapState({hasReg: "hasReg", localAccount: "account"})
+			...mapState({hasReg: "hasReg", localAccount: "account", userAuth: "userAuth", authentication: "authentication"})
 		},
         methods: {
             ...mapMutations(['accountChange', 'isLoginChange', 'tokenChange', 'userIdChange', 'hasRegChange']),
@@ -98,6 +99,7 @@
 				}
             },
 			async onLogin(){
+				this.accountChange(this.account);
 				let res = await api.login(this.password);
 				if(res.code == 200){
 					this.isLoginChange(true);
@@ -107,9 +109,32 @@
 					//     url: '/pages/home/home'
 					// });
 					
-					uni.redirectTo({
-						url: '/pages/bank/bank'
+					await init.initAuth();
+					await init.initHomePage();
+					
+					uni.switchTab({
+						url: '/pages/home/home'
 					});
+					
+					/*
+					if(this.authentication == "4/4"){
+						uni.switchTab({
+							url: '/pages/home/home'
+						});
+					}
+					else{
+						if(this.userAuth.bankCardState == 30){
+							uni.redirectTo({
+								url: '/pages/info/info'
+							});
+						}
+						else{
+							uni.redirectTo({
+								url: '/pages/bank/bank'
+							});
+						}
+					}
+					*/
 				}
 				else{
 					uni.showToast({

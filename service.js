@@ -1,4 +1,20 @@
 const USERS_KEY = 'USERS_KEY';
+const USERS_INFO = 'USERS_INFO';
+
+const getInfo = function(){
+	let ret = '';
+	ret = uni.getStorageSync(USERS_INFO);
+	if (!ret) {
+	    ret = '{}';
+	}
+	return JSON.parse(ret);
+}
+
+
+const setInfo = function (info) {
+    uni.setStorageSync(USERS_INFO, JSON.stringify(info));
+}
+
 
 const getUser = function () {
     let ret = '';
@@ -53,6 +69,8 @@ const setUser = function (userInfo) {
 }
 
 export default {
+	getInfo,
+	setInfo,
     getUser,
     setUser
 }

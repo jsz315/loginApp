@@ -23,7 +23,7 @@ async function initHomePage(){
 		store.commit("authenticationChange", res.data.authentication);
 		
 		// #ifdef APP-PLUS
-		if(res.data.member != 1){
+		if(res.data.member != 1 && store.state.isLogin){
 			setTimeout(()=>{
 				doPopVip();
 			}, 60 * 1000 * 3)

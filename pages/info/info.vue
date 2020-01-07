@@ -30,7 +30,7 @@
 					<view class="tip1">资料信息</view>
 					<view class="tip2">*让我们了解您的资料信息</view>
 				</view>
-				<text class="tip3">{{getStateTip(userAuth.workInfoState)}}</text>
+				<text class="tip3">{{getStateTip(userAuth.contactState)}}</text>
 				<view class="jarrow"></view>
 			</view>
 			<view class="item" @click="jump(3)">
@@ -43,7 +43,7 @@
 				<view class="jarrow"></view>
 			</view>
 			
-			<view class="item" @click="jump(4)">
+			<!-- <view class="item" @click="jump(4)">
 				<image class="jico" :mode="mode" src="../../static/img/g_12.png"></image>
 				<view class="info">
 					<view class="tip1">手机号认证</view>
@@ -51,9 +51,9 @@
 				</view>
 				<text class="tip3">{{getStateTip(userAuth.phoneState)}}</text>
 				<view class="jarrow"></view>
-			</view>
+			</view> -->
 			
-			<view class="tip">
+			<!-- <view class="tip">
 			以下为选填 补充资料可增加额度和审核通过几率
 			</view>
 			
@@ -65,7 +65,7 @@
 				</view>
 				<text class="tip3">不完整</text>
 				<view class="jarrow"></view>
-			</view>
+			</view> -->
 			
 		</view>
 		<view class="jbtn">立即借款</view>
@@ -99,10 +99,20 @@
 			jump(n){
 				let url;
 				if(n == 0){
-					url = '/pages/person/person'
+					if(this.userAuth.realNameState == 30){
+						return;
+					}
+					else{
+						url = '/pages/person/person'
+					}
 				}
 				else if(n == 1){
-					url = '/pages/proof/proof'
+					if(this.userAuth.idState == 30){
+						return;
+					}
+					else{
+						url = '/pages/proof/proof'
+					}
 				}
 				else if(n == 2){
 					url = '/pages/company/company'
