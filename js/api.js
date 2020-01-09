@@ -194,6 +194,15 @@ async function authentication(frontImg, backImg) {
 	return res.data;
 }
 
+async function rightPostage(){
+	let param = {
+		
+	};
+	
+	let res = await http.get('/api/vip/act/right/postage.htm', param);
+	return res.data;
+}
+
 export default {
 	homePage,
 	isPhoneExists,
@@ -208,5 +217,6 @@ export default {
 	realNameSave,
 	mineSave,
 	product,
-	authentication
+	authentication,
+	rightPostage
 }

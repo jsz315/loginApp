@@ -43,6 +43,7 @@
 	    mapMutations
 	} from 'vuex'
     import service from '../../service.js';
+	import api from '../../js/api.js';
     import mInput from '../../components/m-input.vue';
 	
 	import jPop from '@/components/j-pop/j-pop.vue';
@@ -71,7 +72,17 @@
             }
         },
 		computed: mapState([]),
+		mounted(){
+			setTimeout(()=>{
+				this.test();
+			}, 900);
+		},
         methods: {
+			async test(){
+				let res = await api.rightPostage();
+				console.log("rightPostage === ");
+				console.log(res);
+			},
 			onCheck(){
 				this.check = !this.check;
 				this.src = this.check ? '../../static/img/chose2.png' : '../../static/img/chose1.png';
