@@ -203,6 +203,27 @@ async function rightPostage(){
 	return res.data;
 }
 
+async function rightOpen(){
+	let param = {
+		
+	};
+	
+	let res = await http.get('/api/vip/act/right/open.htm', param);
+	return res.data;
+}
+
+async function rightConfirm(){
+	let param = {
+		orderId: "",
+		smsSendNo: "",
+		smsVerifyCode: "",
+	};
+	
+	let res = await http.get('/api/vip/act/right/confirm.htm', param);
+	return res.data;
+}
+
+
 export default {
 	homePage,
 	isPhoneExists,
@@ -218,5 +239,7 @@ export default {
 	mineSave,
 	product,
 	authentication,
-	rightPostage
+	rightPostage,
+	rightOpen,
+	rightConfirm
 }
