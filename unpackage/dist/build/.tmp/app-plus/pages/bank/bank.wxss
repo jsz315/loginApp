@@ -1,34 +1,34 @@
-.box.data-v-3b940da6 {
+.box.data-v-6dc75dea {
   width: 750rpx;
 }
-.box .img.data-v-3b940da6 {
+.box .img.data-v-6dc75dea {
   width: 100%;
   height: 300rpx;
   margin-bottom: 30rpx;
 }
-.box .jbtn.data-v-3b940da6 {
+.box .jbtn.data-v-6dc75dea {
   margin-top: 30rpx;
 }
-.box .jrow-input.data-v-3b940da6 {
+.box .jrow-input.data-v-6dc75dea {
   text-align: right;
 }
-.box .code.data-v-3b940da6 {
+.box .code.data-v-6dc75dea {
   text-align: left;
 }
-.box .tip1.data-v-3b940da6 {
+.box .tip1.data-v-6dc75dea {
   margin: 90rpx 30rpx 0;
   color: #999999;
   font-size: 24rpx;
 }
-.box .tip2.data-v-3b940da6 {
+.box .tip2.data-v-6dc75dea {
   margin: 10rpx 30rpx;
   color: #999999;
   font-size: 24rpx;
 }
-.box .space.data-v-3b940da6 {
+.box .space.data-v-6dc75dea {
   height: 0;
 }
-.box .get-code.data-v-3b940da6 {
+.box .get-code.data-v-6dc75dea {
   width: 225rpx;
 }
 

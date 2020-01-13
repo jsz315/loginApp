@@ -14,6 +14,11 @@
 			</view>
 		</view>
 		
+		<view class="jrow-box">
+			<view class="jrow-tip">金额</view>
+			<view class="jrow-input" v-model="money">3元</view>
+		</view>
+		
         <view class="jbtn" @tap="onNext">立即开通</view>
 		
 		<view class="check-box">

@@ -1,24 +1,31 @@
-.box.data-v-27489fd2 {
+.box.data-v-83e66c02 {
   width: 750rpx;
 }
-.box .user-box.data-v-27489fd2 {
+.box .user-box.data-v-83e66c02 {
   text-align: center;
   margin: 40rpx auto;
 }
-.box .user-box .user-img.data-v-27489fd2 {
+.box .user-box .user-img.data-v-83e66c02 {
   width: 324rpx;
   height: 324rpx;
 }
-.box .tip.data-v-27489fd2 {
+.box .tip.data-v-83e66c02 {
   color: #1A1A1A;
   text-align: center;
   margin: 30rpx;
 }
-.box .jrow-box.data-v-27489fd2 {
+.box .jrow-box.data-v-83e66c02 {
   margin-top: 40rpx;
   margin-bottom: 160rpx;
 }
-.box .find-box.data-v-27489fd2 {
+.box .jrow-box2.data-v-83e66c02 {
+  margin: 0;
+}
+.box .jrow-box3.data-v-83e66c02 {
+  margin-top: 0;
+  margin-bottom: 60rpx;
+}
+.box .find-box.data-v-83e66c02 {
   width: 640rpx;
   font-size: 28rpx;
   text-align: right;

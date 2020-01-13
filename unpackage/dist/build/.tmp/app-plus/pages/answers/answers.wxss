@@ -4,6 +4,7 @@
 .box .item.data-v-262eefe7 {
   padding: 20rpx 30rpx;
   border-bottom: solid 1rpx #f0f0f0;
+  background: #FFFFFF;
 }
 .box .item .quest.data-v-262eefe7 {
   color: #666;

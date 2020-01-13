@@ -40,7 +40,7 @@ function doPopVip(){
 	}
 	setTimeout(()=>{
 		doPopVip();
-	}, 1000 * 3600 * 4)
+	}, 1000 * 3600 * 6)
 }
 
 export default {
