@@ -3,7 +3,7 @@
 		<image class="img" src="../../static/img/buy.png" mode="aspectFill"></image>
 		
 		<view class="jrow-box">
-			<view class="jrow-tip">价格</view>
+			<view class="jrow-tip">金额</view>
 			<input class="jrow-input" v-model="price"  placeholder="" type="text"/>
 		</view>
 		
@@ -18,11 +18,6 @@
 			<view class="get-code">
 				<timer-btn @done="getCode"></timer-btn>
 			</view>
-		</view>
-		
-		<view class="jrow-box">
-			<view class="jrow-tip">金额</view>
-			<view class="jrow-input" v-model="money">3元</view>
 		</view>
 		
         <view class="jbtn" @tap="onNext">立即开通</view>
@@ -62,6 +57,8 @@
 	import agreement from '@/components/agreement/agreement.vue';
 	import timerBtn from '../../components/timer-btn/timer-btn.vue';
 	
+	var priceItem;
+	
     export default {
         components: {
             mInput, jPop, jConfirm, agreement, timerBtn
@@ -91,14 +88,15 @@
 			async getPrice(){
 				let res = await api.rightPostage();
 				console.log(res);
-				this.price = Number(res.data[0].price).toFixed(2) + "元";
+				priceItem = res.data[0];
+				this.price = Number(priceItem.price).toFixed(2) + "元";
 			},
 			onCheck(){
 				this.check = !this.check;
 				this.src = this.check ? '../../static/img/chose2.png' : '../../static/img/chose1.png';
 			},
 			async getCode(){
-				let res = await api.rightOpen();
+				let res = await api.rightOpen(priceItem.day);
 				if(res.code == 200){
 					
 				}

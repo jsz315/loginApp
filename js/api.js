@@ -203,9 +203,9 @@ async function rightPostage(){
 	return res.data;
 }
 
-async function rightOpen(){
+async function rightOpen(day){
 	let param = {
-		
+		day
 	};
 	
 	let res = await http.get('/api/vip/act/right/open.htm', param);
