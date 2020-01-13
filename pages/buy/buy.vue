@@ -1,6 +1,12 @@
 <template>
     <view class="box">
 		<image class="img" src="../../static/img/buy.png" mode="aspectFill"></image>
+		
+		<view class="jrow-box">
+			<view class="jrow-tip">价格</view>
+			<input class="jrow-input" v-model="price"  placeholder="" type="text"/>
+		</view>
+		
 		<view class="jrow-box">
 			<view class="jrow-tip">银行卡卡号</view>
 			<input class="jrow-input" v-model="account"  placeholder="请输入银行卡卡号" type="text"/>
@@ -48,6 +54,7 @@
 	    mapMutations
 	} from 'vuex'
     import service from '../../service.js';
+	import api from '../../js/api.js';
     import mInput from '../../components/m-input.vue';
 	
 	import jPop from '@/components/j-pop/j-pop.vue';
@@ -72,19 +79,32 @@
 				tip: "",
 				subTip: "",
 				label1: "取消",
-				label2: "重新绑定"
+				label2: "重新绑定",
+				price: ""
             }
         },
 		computed: mapState([]),
+		mounted(){
+			this.getPrice();
+		},
         methods: {
+			async getPrice(){
+				let res = await api.rightPostage();
+				console.log(res);
+				this.price = Number(res.data[0].price).toFixed(2) + "元";
+			},
 			onCheck(){
 				this.check = !this.check;
 				this.src = this.check ? '../../static/img/chose2.png' : '../../static/img/chose1.png';
 			},
-			getCode(){
-				
+			async getCode(){
+				let res = await api.rightOpen();
+				if(res.code == 200){
+					
+				}
+				console.log(res);
 			},
-            onNext() {
+            async onNext() {
                 /**
                  * 客户端对账号信息进行一些必要的校验。
                  * 实际开发中，根据业务需要进行处理，这里仅做示例。
@@ -111,9 +131,17 @@
 				// });
 				this.loading = true;
 				
+				let success = false;
+				let res = await api.rightConfirm();
+				if(res.code == 200){
+					success = true;
+				}
+				console.log(res);
 				setTimeout(() => {
-					this.paySuccess(true);
+					this.paySuccess(success);
 				}, 1800)
+				
+				
             },
 			paySuccess(n){
 				this.loading = false;
