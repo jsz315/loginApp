@@ -14,7 +14,7 @@
 		
 		<view class="jrow-box">
 			<view class="jrow-tip">付款验证码</view>
-			<input class="jrow-input" v-model="code"  placeholder="请输入短信验证码" type="text"/>
+			<input class="jrow-input" v-model="smsVerifyCode"  placeholder="请输入短信验证码" type="text"/>
 			<view class="get-code">
 				<timer-btn @done="getCode"></timer-btn>
 			</view>
@@ -57,7 +57,9 @@
 	import agreement from '@/components/agreement/agreement.vue';
 	import timerBtn from '../../components/timer-btn/timer-btn.vue';
 	
-	var priceItem;
+	let priceItem;
+	let orderId;
+	let smsSendNo;
 	
     export default {
         components: {
@@ -71,7 +73,7 @@
 				ico: '../../static/img/success.png',
                 src: '../../static/img/chose2.png',
 				check: true,
-                code: '',
+                smsVerifyCode: '',
 				account: '',
 				tip: "",
 				subTip: "",
@@ -98,9 +100,14 @@
 			async getCode(){
 				let res = await api.rightOpen(priceItem.day);
 				if(res.code == 200){
-					
+					orderId = res.data.orderId;
+					smsSendNo = res.data.smsSendNo;
 				}
 				console.log(res);
+				uni.showToast({
+				    icon: 'none',
+				    title: res.msg
+				});
 			},
             async onNext() {
                 /**
@@ -114,7 +121,7 @@
 					});
 					return;
 				}
-                if (this.code.length < 4) {
+                if (this.smsVerifyCode.length < 4) {
                     uni.showToast({
                         icon: 'none',
                         title: '请输入正确的验证码'
@@ -130,16 +137,15 @@
 				this.loading = true;
 				
 				let success = false;
-				let res = await api.rightConfirm();
+				let res = await api.rightConfirm(orderId, smsSendNo, this.smsVerifyCode);
 				if(res.code == 200){
-					success = true;
+					success = res.data.status == 20;
 				}
+				
 				console.log(res);
 				setTimeout(() => {
 					this.paySuccess(success);
 				}, 1800)
-				
-				
             },
 			paySuccess(n){
 				this.loading = false;

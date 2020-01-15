@@ -212,11 +212,11 @@ async function rightOpen(day){
 	return res.data;
 }
 
-async function rightConfirm(){
+async function rightConfirm(orderId, smsSendNo, smsVerifyCode){
 	let param = {
-		orderId: "",
-		smsSendNo: "",
-		smsVerifyCode: "",
+		orderId: orderId,
+		smsSendNo: smsSendNo,
+		smsVerifyCode: smsVerifyCode,
 	};
 	
 	let res = await http.get('/api/vip/act/right/confirm.htm', param);
