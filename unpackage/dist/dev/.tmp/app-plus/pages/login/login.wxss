@@ -18,6 +18,13 @@
   margin-top: 40rpx;
   margin-bottom: 160rpx;
 }
+.box .jrow-box2.data-v-2adf8aaa {
+  margin: 0;
+}
+.box .jrow-box3.data-v-2adf8aaa {
+  margin-top: 0;
+  margin-bottom: 60rpx;
+}
 .box .find-box.data-v-2adf8aaa {
   width: 640rpx;
   font-size: 28rpx;

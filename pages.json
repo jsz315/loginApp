@@ -1,7 +1,7 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页,
 		{
-			"path": "pages/vip/vip",
+			"path": "pages/home/home",
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
@@ -17,7 +17,7 @@
 				"navigationBarTitleText": "资料信息"
 			}
 		}, {
-			"path": "pages/home/home",
+			"path": "pages/vip/vip",
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom"

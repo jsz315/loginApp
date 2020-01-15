@@ -4,12 +4,12 @@
 			<view class="tip1">{{isAuthentication ? "获得额度（元）" : "申请金额（元）"}}</view>
 			<view class="tip2">￥{{num1}}</view>
 			<view class="bar">
-				<view class="nbtn cut"></view>
+				<view class="nbtn cut" @click="cut"></view>
 				<view class="line">
-					<slider :value="num" :min="min" max="200000" @change="sliderChange" @changing="sliderChange" activeColor="#FFCC33" backgroundColor="#000000" block-color="#8A6DE9"
+					<slider :value="num" :min="min" :max="max" @change="sliderChange" @changing="sliderChange" activeColor="#FFCC33" backgroundColor="#000000" block-color="#8A6DE9"
 					 block-size="20" />
 				</view>
-				<view class="nbtn add"></view>
+				<view class="nbtn add" @click="add"></view>
 			</view>
 			<view class="tip3">{{num}}元</view>
 			<view class="tip4">200000元</view>
@@ -34,6 +34,7 @@
 	        return {
 				min: 3000,
 				num: 3000,
+				max: 200000,
 				cur: 1,
 				list: [1, 3, 6, 9, 12, 24, 36]
 			}
@@ -68,6 +69,14 @@
 	        },
 			onChose(n){
 				this.cur = n;
+			},
+			cut(){
+				var t = this.max - this.min;
+				this.num -= t / 20;
+			},
+			add(){
+				var t = this.max - this.min;
+				this.num += t / 20;
 			}
 	    }
 	}
