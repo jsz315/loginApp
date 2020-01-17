@@ -1,16 +1,16 @@
-.company.data-v-09f14a18 {
+.company.data-v-30b6efb8 {
   width: 750rpx;
   text-align: center;
 }
-.company .tip.data-v-09f14a18 {
+.company .tip.data-v-30b6efb8 {
   margin: 30rpx;
   color: #999999;
   font-size: 24rpx;
 }
-.company .jrow-input.data-v-09f14a18 {
+.company .jrow-input.data-v-30b6efb8 {
   text-align: right;
 }
-.company .jbtn.data-v-09f14a18 {
+.company .jbtn.data-v-30b6efb8 {
   margin-top: 30rpx;
 }
 

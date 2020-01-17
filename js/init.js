@@ -21,6 +21,9 @@ async function initHomePage(){
 	if(res.code == 200){
 		store.commit("isVipChange", res.data.member == 1);
 		store.commit("authenticationChange", res.data.authentication);
+		if(res.data.authentication == "4/4"){
+			store.commit("inProChange", true);
+		}
 		
 		// #ifdef APP-PLUS
 		if(res.data.member != 1 && store.state.isLogin){

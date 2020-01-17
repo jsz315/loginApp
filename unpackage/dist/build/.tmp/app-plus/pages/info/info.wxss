@@ -1,13 +1,13 @@
-.box.data-v-5af4bacd {
+.box.data-v-993ef896 {
   width: 750rpx;
   text-align: center;
 }
-.box .list .tip.data-v-5af4bacd {
+.box .list .tip.data-v-993ef896 {
   margin: 30rpx;
   color: #999999;
   font-size: 24rpx;
 }
-.box .list .item.data-v-5af4bacd {
+.box .list .item.data-v-993ef896 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -18,30 +18,30 @@
   background: #FFFFFF;
   padding: 30rpx 0;
 }
-.box .list .item .jico.data-v-5af4bacd {
+.box .list .item .jico.data-v-993ef896 {
   width: 64rpx;
   height: 64rpx;
   margin-left: 30rpx;
 }
-.box .list .item .info.data-v-5af4bacd {
+.box .list .item .info.data-v-993ef896 {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
   text-align: left;
   margin-left: 30rpx;
 }
-.box .list .item .info .tip1.data-v-5af4bacd {
+.box .list .item .info .tip1.data-v-993ef896 {
   color: #333;
 }
-.box .list .item .info .tip2.data-v-5af4bacd {
+.box .list .item .info .tip2.data-v-993ef896 {
   color: #999;
   font-size: 24rpx;
 }
-.box .list .item .tip3.data-v-5af4bacd {
+.box .list .item .tip3.data-v-993ef896 {
   margin-right: 20rpx;
   color: #fb6f00;
 }
-.box .jbtn.data-v-5af4bacd {
+.box .jbtn.data-v-993ef896 {
   margin-top: 100rpx;
 }
 

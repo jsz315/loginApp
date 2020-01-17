@@ -3,7 +3,7 @@
 		<image class="title-img" src="../../static/img/push.png" mode="aspectFill"></image>
 		<view class="tip">请选择以下平台进行借款</view>
 		<view class="list">
-			<view class="item" v-for="item in list" v-bind:key="item" @tap="jump(item)">
+			<view class="item" v-for="item in list" v-bind:key="item.id" @tap="jump(item)">
 				<image class="jico" :mode="mode" :src="item.dcLoanIcon"></image>
 				<view class="info">
 					<view class="tip1">{{item.dcLoanName}}</view>
@@ -38,7 +38,7 @@
 					let res = await api.product(this.current);
 					if(res.code == 200){
 						this.list = this.list.concat(res.data);
-						this.total = rs.data.page.total;
+						this.total = res.data.page.total;
 					}
 				}
 			}

@@ -105,6 +105,7 @@ const store = new Vuex.Store({
 		},
 		authenticationChange(state, authentication){
 			state.authentication = authentication;
+			updateLocalData(state);
 		}
     }
 })

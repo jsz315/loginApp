@@ -68,7 +68,7 @@
 			</view> -->
 			
 		</view>
-		<view class="jbtn">立即借款</view>
+		<!-- <view class="jbtn">立即借款</view> -->
 	</view>
 </template>
 

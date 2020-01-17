@@ -1,15 +1,15 @@
-.box.data-v-5cfcc152 {
+.box.data-v-2567cdfa {
   width: 750rpx;
 }
-.box .img.data-v-5cfcc152 {
+.box .img.data-v-2567cdfa {
   width: 100%;
   height: 360rpx;
   margin-bottom: 30rpx;
 }
-.box .jbtn.data-v-5cfcc152 {
+.box .jbtn.data-v-2567cdfa {
   margin-top: 100rpx;
 }
-.box .check-box.data-v-5cfcc152 {
+.box .check-box.data-v-2567cdfa {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -23,20 +23,20 @@
   font-size: 24rpx;
   margin-top: 50rpx;
 }
-.box .check-box .ico.data-v-5cfcc152 {
+.box .check-box .ico.data-v-2567cdfa {
   width: 24rpx;
   height: 24rpx;
 }
-.box .check-box .hit-ico.data-v-5cfcc152 {
+.box .check-box .hit-ico.data-v-2567cdfa {
   padding: 20rpx;
 }
-.box .check-box .hit-txt.data-v-5cfcc152 {
+.box .check-box .hit-txt.data-v-2567cdfa {
   padding: 20rpx 0;
 }
-.box .get-code.data-v-5cfcc152 {
+.box .get-code.data-v-2567cdfa {
   width: 225rpx;
 }
-.pay-tip.data-v-5cfcc152 {
+.pay-tip.data-v-2567cdfa {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -51,16 +51,16 @@
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-.pay-tip .pay-ico.data-v-5cfcc152 {
+.pay-tip .pay-ico.data-v-2567cdfa {
   width: 64rpx;
   height: 64rpx;
   margin-bottom: 40rpx;
-  -webkit-animation: rotate-data-v-5cfcc152 0.84s infinite;
-          animation: rotate-data-v-5cfcc152 0.84s infinite;
+  -webkit-animation: rotate-data-v-2567cdfa 0.84s infinite;
+          animation: rotate-data-v-2567cdfa 0.84s infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
-@-webkit-keyframes rotate-data-v-5cfcc152 {
+@-webkit-keyframes rotate-data-v-2567cdfa {
 0% {
     -webkit-transform: rotate(0);
             transform: rotate(0);

@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/vip/vip",
+    "pages/home/home",
     "pages/login/login",
     "pages/company/company",
-    "pages/home/home",
+    "pages/vip/vip",
     "pages/help/help",
     "pages/mine/mine",
     "pages/info/info",
